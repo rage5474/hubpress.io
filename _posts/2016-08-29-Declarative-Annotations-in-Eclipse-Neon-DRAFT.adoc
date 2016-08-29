@@ -1,1 +1,21 @@
-= Anaylse OSGi DS startup behavior [DRAFT] =
+= Declarative Annotations in Eclipse Neon [DRAFT] =
+
+== Motivation ==
+Many Eclipse RCP applications are using OSGi Services make their application leightweight and flexible. The most convient method is to use OSGi Services in combination with Declarative Services. This allows to specifiy OSGi Services by XML files. Why this can be quite convient can be found here http://www.vogella.com/tutorials/OSGiServices/article.html#declarativeservices[DS@Vogella]. Before Eclipse Neon there were two possibilities to edit these XML files.
+
+Before Eclipse Neon there were two possibilties to create or modify these XML files. 
+
+. By Hand - Disadvantage: Error prone. 
+. Integration editor - Disadvantages: Error prone on re-factoring, no consistent naming scheme.
+
+No Eclipse Neon integrated a third solution: Generation of XML files by code annotations. In this blog I want to show more detailled how this can work. 
+
+== Code Example ==
+
+
+
+
+
+
+
+
