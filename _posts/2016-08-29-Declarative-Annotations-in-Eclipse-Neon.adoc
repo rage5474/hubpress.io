@@ -121,3 +121,7 @@ Content look like this:
 </scr:component>
 ----
 
+== Advantages ==
+* Naming scheme of XML files are always the same.
+* Usability is trivial.
+* Annoations can be easily used for byte code generated traces (I will write another post for this topic!).
