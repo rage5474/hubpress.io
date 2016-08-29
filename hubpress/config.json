@@ -4,7 +4,11 @@
     "repositoryName": "rage5474.github.io",
     "branch": "master"
   },
+  "site": {
+    "title": "Eclipse RCP Blog"
+  },
+  "socialnetwork": {},
   "theme": {
-    "name": "Casper"
+    "name": "casper"
   }
 }
