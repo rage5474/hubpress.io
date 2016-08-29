@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Aug 2016 11:59:02 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Anaylse OSGi DS startup behavior [DRAFT]]]></title><link>https://rage5474.github.io/2016/08/29/Anaylse-OS-G-DS-startup-behavior-DRAFT.html</link><guid isPermaLink="true">https://rage5474.github.io/2016/08/29/Anaylse-OS-G-DS-startup-behavior-DRAFT.html</guid><pubDate>Mon, 29 Aug 2016 00:00:00 GMT</pubDate></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Aug 2016 18:53:26 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon [DRAFT]]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many Eclipse RCP applications are using OSGi Services make their application leightweight and flexible. The most convient method is to use OSGi Services in combination with Declarative Services. This allows to specifiy OSGi Services by XML files. Why this can be quite convient can be found here <a href="http://www.vogella.com/tutorials/OSGiServices/article.html#declarativeservices">DS@Vogella</a>. Before Eclipse Neon there were two possibilities to edit these XML files.</p>
+</div>
+<div class="paragraph">
+<p>Before Eclipse Neon there were two possibilties to create or modify these XML files.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>By Hand - Disadvantage: Error prone.</p>
+</li>
+<li>
+<p>Integration editor - Disadvantages: Error prone on re-factoring, no consistent naming scheme.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>No Eclipse Neon integrated a third solution: Generation of XML files by code annotations. In this blog I want to show more detailled how this can work.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code_example">Code Example</h2>
+<div class="sectionbody">
+
+</div>
+</div>]]></description><link>https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html</link><guid isPermaLink="true">https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html</guid><pubDate>Mon, 29 Aug 2016 00:00:00 GMT</pubDate></item></channel></rss>
