@@ -50,7 +50,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
 }
 ----
-To register a class as OSGi-Service (Component is used here as synonym) just use `@Component` as class annotation. That's the minimum to register a class as OSGi service. If you save this class automatically a new XML file `my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl.xml` will be generated `OSGI-INF`. 
+To register a class as OSGi-Service (Component is used here as synonym) just use `@Component` as class annotation. That's the minimum to register a class as OSGi service. Whenever you save this class, automatically a new XML file `my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl.xml` will be generated `OSGI-INF`. 
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -63,8 +63,8 @@ To register a class as OSGi-Service (Component is used here as synonym) just use
 ----
 So in the most cases this should be enough. Look's quite easy. 
 
-
-=== HelloWorldClient ===
+Let us have a look on the `HelloWorldClientImpl`. It's the service that is using our `HelloWorldService`. 
+At first it has to become also a OSGi service. So `@Component`annotation is needed. Then we need the reference to the `HelloWorldService`. This is done by a method, which is annotated by `@Reference`. But here its also a special parameter `unbind` needed, which also points to the unbind method. So the `@Reference` method is used inject the `HelloWorldService` to the `HelloWorldClientImpl`. In case you have multiple `@Reference` methods, you should use the `@Activate` method to start your component. Otherwise it's not guaranteed, that all service references were already injected. 
 
 [source,java]
 ----
@@ -75,46 +75,41 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
-import my.osgi.ds.example.common.DebugOutputHelper;
 import my.osgi.ds.example.helloservice.api.HelloWorldService;
 
 @Component
 public class HelloWorldClientImpl {
-
 	private HelloWorldService helloWorldService;
 
-	public HelloWorldClientImpl() {
-		DebugOutputHelper.logConstructor(getClass());
-	}
-
-	@Activate <1>
-	public void start() {
-		DebugOutputHelper.logStart(getClass());
-
-		helloWorldService.sayHello("Mr. X");
-	}
-
-	@Reference(unbind = "unbind") <2>
+	@Reference(unbind = "unbind") 
 	public void bind(HelloWorldService helloWorldService) {
-		DebugOutputHelper.logBind(getClass(), helloWorldService.getClass());
-
 		this.helloWorldService = helloWorldService;
 	}
 
-	public void unbind(HelloWorldService helloWorldService) {
-		DebugOutputHelper.logUnbind(getClass(), helloWorldService.getClass());
+	@Activate
+	public void start() {
+		helloWorldService.sayHello("Mr. X");
+	}
 
+	public void unbind(HelloWorldService helloWorldService) {
 		this.helloWorldService = null;
 	}
-
-	@Deactivate <3>
+    
+	@Deactivate
 	public void stop() {
-		DebugOutputHelper.logStop(getClass());
+		this.helloWorldService = null;
 	}
 }
-
 ----
-<1> Activation method
-<2> OSGi Service Reference
-<3> Deactivation method
+Again a XML file `my.osgi.ds.example.helloclient.impl.HelloWorldClientImpl.xml` is generated in the folder `OSGI-INF`. 
+
+Content look like this:
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="start" deactivate="stop" name="my.osgi.ds.example.helloclient.impl.HelloWorldClientImpl">
+   <reference bind="bind" cardinality="1..1" interface="my.osgi.ds.example.helloservice.api.HelloWorldService" policy="static" unbind="unbind"/>
+   <implementation class="my.osgi.ds.example.helloclient.impl.HelloWorldClientImpl"/>
+</scr:component>
+----
 
