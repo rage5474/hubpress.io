@@ -12,17 +12,17 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1472497618259"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1472497618259"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1472498789715"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1472498789715"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1472497618259" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1472497618259" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1472498789715" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1472498789715" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1472497618259">
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1472498789715">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1472497618259" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1472497618259" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1472498789715" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1472498789715" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html" />
@@ -162,8 +162,9 @@ null
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_helloworldservice">HelloWorldService</h3>
+<div class="paragraph">
+<p>The HelloWorldService is exporting following simple interface.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.api;
@@ -174,54 +175,47 @@ public interface HelloWorldService {
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Whenever <code>sayHello</code> is called 'Hello + name' is printed on the console.</p>
+</div>
+<div class="paragraph">
+<p>Here is the corresponding implmentation of this OSGi Service. So the implementation is quite straight forward.
+Now let us come to the interesting part of this class - the <code>@Component</code> DS Annotations.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.impl;
 
-import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Deactivate;
-
-import my.osgi.ds.example.common.DebugOutputHelper;
 import my.osgi.ds.example.helloservice.api.HelloWorldService;
 
 @Component
 public class HelloWorldServiceImpl implements HelloWorldService {
-
-	public HelloWorldServiceImpl() {
-		DebugOutputHelper.logConstructor(getClass());
-	}
-
-	@Activate <i class="conum" data-value="1"></i><b>(1)</b>
-	public void start() {
-		DebugOutputHelper.logStart(getClass());
-	}
 
 	@Override
 	public void sayHello(String name) {
 		System.out.println(("Hello " + name + "!"));
 	}
 
-	@Deactivate <i class="conum" data-value="2"></i><b>(2)</b>
-	public void stop() {
-		DebugOutputHelper.logStop(getClass());
-	}
-
 }</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Activation method</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Deactivation method</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>To register a class as OSGi-Service (Component is used here as synonym) just use <code>@Component</code> as class annotation. That&#8217;s the minimum to register a class as OSGi service. If you save this class automatically a new XML file <code>my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl.xml</code> will be generated <code>OSGI-INF</code>.</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl"&gt;
+   &lt;service&gt;
+      &lt;provide interface="my.osgi.ds.example.helloservice.api.HelloWorldService"/&gt;
+   &lt;/service&gt;
+   &lt;implementation class="my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl"/&gt;
+&lt;/scr:component&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So in the most cases this should be enough. Look&#8217;s quite easy.</p>
 </div>
 <div class="sect2">
 <h3 id="_helloworldclient">HelloWorldClient</h3>
@@ -357,9 +351,9 @@ public class HelloWorldClientImpl {
       </script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1472497618259"></script>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1472498789715"></script>
     <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1472497618259"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1472498789715"></script>
 
     <script>
       $(document).foundation();
