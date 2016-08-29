@@ -5,7 +5,8 @@
     "branch": "master"
   },
   "site": {
-    "title": "Eclipse RCP Blog"
+    "title": "Eclipse RCP Blog",
+    "description": "Test test test test test"
   },
   "socialnetwork": {},
   "theme": {
