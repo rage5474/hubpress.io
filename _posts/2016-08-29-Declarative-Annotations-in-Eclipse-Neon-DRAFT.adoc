@@ -17,7 +17,7 @@ Expecting a simple HelloWorld OSGi application, with
 * a HelloWorldService and
 * a HelloWorldClient.
 
-=== HelloWorldService ===
+The HelloWorldService is exporting following simple interface.
 
 [source,java]
 ----
@@ -29,43 +29,40 @@ public interface HelloWorldService {
 }
 ----
 
+Whenever `sayHello` is called 'Hello + name' is printed on the console. 
+
+Here is the corresponding implmentation of this OSGi Service. So the implementation is quite straight forward. 
+Now let us come to the interesting part of this class - the `@Component` DS Annotations. 
 [source,java]
 ----
 package my.osgi.ds.example.helloservice.impl;
 
-import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Deactivate;
-
-import my.osgi.ds.example.common.DebugOutputHelper;
 import my.osgi.ds.example.helloservice.api.HelloWorldService;
 
 @Component
 public class HelloWorldServiceImpl implements HelloWorldService {
-
-	public HelloWorldServiceImpl() {
-		DebugOutputHelper.logConstructor(getClass());
-	}
-
-	@Activate <1>
-	public void start() {
-		DebugOutputHelper.logStart(getClass());
-	}
 
 	@Override
 	public void sayHello(String name) {
 		System.out.println(("Hello " + name + "!"));
 	}
 
-	@Deactivate <2>
-	public void stop() {
-		DebugOutputHelper.logStop(getClass());
-	}
-
 }
 ----
-<1> Activation method
-<2> Deactivation method
+To register a class as OSGi-Service (Component is used here as synonym) just use `@Component` as class annotation. That's the minimum to register a class as OSGi service. If you save this class automatically a new XML file `my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl.xml` will be generated `OSGI-INF`. 
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl">
+   <service>
+      <provide interface="my.osgi.ds.example.helloservice.api.HelloWorldService"/>
+   </service>
+   <implementation class="my.osgi.ds.example.helloservice.impl.HelloWorldServiceImpl"/>
+</scr:component>
+----
+So in the most cases this should be enough. Look's quite easy. 
+
 
 === HelloWorldClient ===
 
