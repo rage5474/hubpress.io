@@ -12,10 +12,112 @@ No Eclipse Neon integrated a third solution: Generation of XML files by code ann
 
 == Code Example ==
 
+Expecting a simple HelloWorld OSGi application, with 
 
+* a HelloWorldService and
+* a HelloWorldClient.
 
+=== HelloWorldService ===
 
+[source,java]
+----
+package my.osgi.ds.example.helloservice.api;
 
+public interface HelloWorldService {
+    // Prints 'Hello + name' to the console
+    public void sayHello(String name);
+}
+----
 
+[source,java]
+----
+package my.osgi.ds.example.helloservice.impl;
 
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldServiceImpl implements HelloWorldService {
+
+	public HelloWorldServiceImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <1>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+	}
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println(("Hello " + name + "!"));
+	}
+
+	@Deactivate <2>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+
+}
+----
+<1> Activation method
+<2> Deactivation method
+
+=== HelloWorldClient ===
+
+[source,java]
+----
+package my.osgi.ds.example.helloclient.impl;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldClientImpl {
+
+	private HelloWorldService helloWorldService;
+
+	public HelloWorldClientImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <1>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+
+		helloWorldService.sayHello("Mr. X");
+	}
+
+	@Reference(unbind = "unbind") <2>
+	public void bind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logBind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = helloWorldService;
+	}
+
+	public void unbind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logUnbind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = null;
+	}
+
+	@Deactivate <3>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+}
+
+----
+<1> Activation method
+<2> OSGi Service Reference
+<3> Deactivation method
 
