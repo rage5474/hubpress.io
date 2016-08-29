@@ -12,17 +12,17 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1472496833396"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1472496833396"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1472497618259"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1472497618259"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1472496833396" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1472496833396" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1472497618259" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1472497618259" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1472496833396">
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1472497618259">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1472496833396" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1472496833396" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1472497618259" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1472497618259" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html" />
@@ -149,7 +149,147 @@ null
 <div class="sect1">
 <h2 id="_code_example">Code Example</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Expecting a simple HelloWorld OSGi application, with</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a HelloWorldService and</p>
+</li>
+<li>
+<p>a HelloWorldClient.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_helloworldservice">HelloWorldService</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.api;
 
+public interface HelloWorldService {
+    // Prints 'Hello + name' to the console
+    public void sayHello(String name);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.impl;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldServiceImpl implements HelloWorldService {
+
+	public HelloWorldServiceImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <i class="conum" data-value="1"></i><b>(1)</b>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+	}
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println(("Hello " + name + "!"));
+	}
+
+	@Deactivate <i class="conum" data-value="2"></i><b>(2)</b>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Activation method</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Deactivation method</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_helloworldclient">HelloWorldClient</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloclient.impl;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldClientImpl {
+
+	private HelloWorldService helloWorldService;
+
+	public HelloWorldClientImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <i class="conum" data-value="1"></i><b>(1)</b>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+
+		helloWorldService.sayHello("Mr. X");
+	}
+
+	@Reference(unbind = "unbind") <i class="conum" data-value="2"></i><b>(2)</b>
+	public void bind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logBind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = helloWorldService;
+	}
+
+	public void unbind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logUnbind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = null;
+	}
+
+	@Deactivate <i class="conum" data-value="3"></i><b>(3)</b>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Activation method</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>OSGi Service Reference</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Deactivation method</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
                         <aside class="tags fi-pricetag-multiple">No tag</aside>
@@ -217,9 +357,9 @@ null
       </script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1472496833396"></script>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1472497618259"></script>
     <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1472496833396"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1472497618259"></script>
 
     <script>
       $(document).foundation();
