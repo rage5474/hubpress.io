@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Aug 2016 18:53:53 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon [DRAFT]]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Aug 2016 19:06:58 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon [DRAFT]]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -25,6 +25,146 @@
 <div class="sect1">
 <h2 id="_code_example">Code Example</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Expecting a simple HelloWorld OSGi application, with</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a HelloWorldService and</p>
+</li>
+<li>
+<p>a HelloWorldClient.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_helloworldservice">HelloWorldService</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.api;
 
+public interface HelloWorldService {
+    // Prints 'Hello + name' to the console
+    public void sayHello(String name);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloservice.impl;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldServiceImpl implements HelloWorldService {
+
+	public HelloWorldServiceImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <i class="conum" data-value="1"></i><b>(1)</b>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+	}
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println(("Hello " + name + "!"));
+	}
+
+	@Deactivate <i class="conum" data-value="2"></i><b>(2)</b>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Activation method</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Deactivation method</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_helloworldclient">HelloWorldClient</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package my.osgi.ds.example.helloclient.impl;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+
+import my.osgi.ds.example.common.DebugOutputHelper;
+import my.osgi.ds.example.helloservice.api.HelloWorldService;
+
+@Component
+public class HelloWorldClientImpl {
+
+	private HelloWorldService helloWorldService;
+
+	public HelloWorldClientImpl() {
+		DebugOutputHelper.logConstructor(getClass());
+	}
+
+	@Activate <i class="conum" data-value="1"></i><b>(1)</b>
+	public void start() {
+		DebugOutputHelper.logStart(getClass());
+
+		helloWorldService.sayHello("Mr. X");
+	}
+
+	@Reference(unbind = "unbind") <i class="conum" data-value="2"></i><b>(2)</b>
+	public void bind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logBind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = helloWorldService;
+	}
+
+	public void unbind(HelloWorldService helloWorldService) {
+		DebugOutputHelper.logUnbind(getClass(), helloWorldService.getClass());
+
+		this.helloWorldService = null;
+	}
+
+	@Deactivate <i class="conum" data-value="3"></i><b>(3)</b>
+	public void stop() {
+		DebugOutputHelper.logStop(getClass());
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Activation method</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>OSGi Service Reference</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Deactivation method</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>]]></description><link>https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html</link><guid isPermaLink="true">https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon-DRAFT.html</guid><pubDate>Mon, 29 Aug 2016 00:00:00 GMT</pubDate></item></channel></rss>
