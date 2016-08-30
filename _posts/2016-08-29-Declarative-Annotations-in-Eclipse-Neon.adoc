@@ -10,7 +10,6 @@ Before Eclipse Neon there were two possibilties to create or modify these XML fi
 No Eclipse Neon integrated a third solution: Generation of XML files by code annotations. In this blog I want to show more detailled how this can work. 
 
 == Code Example ==
-
 Expecting a simple HelloWorld OSGi application, with 
 
 * a HelloWorldService and
