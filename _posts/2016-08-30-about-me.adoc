@@ -1,4 +1,18 @@
-= about
+= about me
 
-* Name: Raphael Geissler
-* ...
+Name: Raphael Geissler
+
+Position: Software Architect for Eclipse RCP Applications (since 2010)
+
+Company: Elektrobit Automotive GmbH (Germany)
+
+Interest:
+
+* Software Architecture
+* Clean Code
+* Software erosion control
+* Continuous Delivery
+* Software Quality
+* Software Runtime Analysis
+* Domain specific languages (DSL)
+* Java, Xtend
