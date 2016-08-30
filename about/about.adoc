@@ -1,4 +1,17 @@
-= About me
-permalink: /about
+= about me
 
-Raphael Geissler
+[width="100%",frame="topbot"]
+|========================================================================================
+|*Name* 			|Raphael Geissler
+|*Position* 		|Software Architect for Eclipse RCP Applications (since 2010)
+|*Company*  		|Elektrobit Automotive GmbH (Germany)
+|*Business Profile* |https://www.xing.com/profile/Raphael_Geissler
+|*Interests*		|Software Architecture
+|					|Clean Code
+|					|Software erosion control
+|					|Continuous Delivery
+|					|Software Quality
+|					|Software Runtime Analysis
+|					|Domain specific languages (DSL)
+|					|Java, Xtend
+|========================================================================================
