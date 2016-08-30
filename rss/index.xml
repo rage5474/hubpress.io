@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Aug 2016 19:48:55 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 30 Aug 2016 09:16:57 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -137,7 +137,7 @@ public class HelloWorldClientImpl {
 <p>Again a XML file <code>my.osgi.ds.example.helloclient.impl.HelloWorldClientImpl.xml</code> is generated in the folder <code>OSGI-INF</code>.</p>
 </div>
 <div class="paragraph">
-<p>Content look like this:</p>
+<p>Content looks like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -173,6 +173,14 @@ public class HelloWorldClientImpl {
 <p>Annoations can be easily used for byte code generated traces (I will write another post for this topic!).</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_try_it_out">Try it out</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A full example can be found here: <a href="https://github.com/rage5474/rcp.examples/tree/master/ds.annotation.example/my.osgi.ds.example">ds.annotation.example@github</a>.</p>
 </div>
 </div>
 </div>]]></description><link>https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon.html</link><guid isPermaLink="true">https://rage5474.github.io/2016/08/29/Declarative-Annotations-in-Eclipse-Neon.html</guid><pubDate>Mon, 29 Aug 2016 00:00:00 GMT</pubDate></item></channel></rss>
