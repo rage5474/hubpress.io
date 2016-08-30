@@ -103,7 +103,7 @@ public class HelloWorldClientImpl {
 ----
 Again a XML file `my.osgi.ds.example.helloclient.impl.HelloWorldClientImpl.xml` is generated in the folder `OSGI-INF`. 
 
-Content look like this:
+Content looks like this:
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,3 +125,6 @@ Content look like this:
 * Naming scheme of XML files are always the same.
 * Usability is trivial.
 * Annoations can be easily used for byte code generated traces (I will write another post for this topic!).
+
+== Try it out ==
+A full example can be found here: https://github.com/rage5474/rcp.examples/tree/master/ds.annotation.example/my.osgi.ds.example[ds.annotation.example@github].
