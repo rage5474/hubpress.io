@@ -1,4 +1,5 @@
 = about
+:page-permalink: /about/
 
 * Name: Raphael Geissler
 * ...
