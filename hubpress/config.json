@@ -7,7 +7,7 @@
   "site": {
     "title": "Eclipse RCP Blog",
     "description": "Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ",
-    "logo": "ich.jpg"
+    "logo": "/images/ich.jpg"
   },
   "socialnetwork": {},
   "theme": {
