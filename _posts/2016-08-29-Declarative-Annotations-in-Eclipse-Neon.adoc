@@ -30,7 +30,7 @@ public interface HelloWorldService {
 
 Whenever `sayHello` is called 'Hello + name' is printed on the console. 
 
-Here is the corresponding implmentation of this OSGi Service. So the implementation is quite straight forward. 
+Here is the corresponding implementation of this OSGi Service. So the implementation is quite straight forward. 
 Now let us come to the interesting part of this class - the `@Component` DS Annotations. 
 [source,java]
 ----
