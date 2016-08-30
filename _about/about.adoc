@@ -1,4 +1,4 @@
 = About me
-perma-link: /about
+permalink: /about
 
 Raphael Geissler
