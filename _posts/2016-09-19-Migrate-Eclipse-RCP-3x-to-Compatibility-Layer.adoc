@@ -1,0 +1,3 @@
+= Migrate Eclipse RCP 3.x to Compatibility Layer =
+
+== Motivation ==
