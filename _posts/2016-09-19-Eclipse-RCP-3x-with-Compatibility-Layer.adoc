@@ -1,3 +1,16 @@
-= Migrate Eclipse RCP 3.x to Compatibility Layer =
+= Eclipse RCP 3.x with Compatibility Layer =
+
+Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.
 
 == Motivation ==
+* There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version. 
+* There are a few descriptions what must be done to use the Compatibility Layer, but no step-by-step tutorial
+
+== Background ==
+
+
+== References ==
+https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
+http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/
+http://www.vogella.com/tutorials/Eclipse4MigrationGuide/article.html
+
