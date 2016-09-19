@@ -4,9 +4,18 @@ Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3
 
 == Motivation ==
 * There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version. 
-* There are a few descriptions what must be done to use the Compatibility Layer, but no step-by-step tutorial
+* There are a few descriptions in the internet what must be done to use the Compatibility Layer, but no step-by-step tutorial
 
 == Background ==
+* If you not know what the compatibility layer is than read this https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
+* If you want more background information about migrating strategies of Eclipse RCP 3.x than read this http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/ 
+
+== Prerequisite ==
+* Download Eclipse RCP and RAP for Mars from here http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2
+
+== Tutorial ==
+=== Create sample plug-in ===
+
 
 
 == References ==
