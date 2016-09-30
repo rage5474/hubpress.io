@@ -15,8 +15,27 @@ Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3
 
 == Tutorial ==
 === Create sample plug-in ===
-
-
+image::complayer/comp-layer-tut-1.png[]
+image::complayer/comp-layer-tut-2.png[]
+image::complayer/comp-layer-tut-3.png[]
+image::complayer/comp-layer-tut-4.png[]
+image::complayer/comp-layer-tut-5.png[]
+image::complayer/comp-layer-tut-6.png[]
+image::complayer/comp-layer-tut-7.png[]
+image::complayer/comp-layer-tut-8.png[]
+image::complayer/comp-layer-tut-9.png[]
+image::complayer/comp-layer-tut-10.png[]
+image::complayer/comp-layer-tut-11.png[]
+image::complayer/comp-layer-tut-12.png[]
+image::complayer/comp-layer-tut-13.png[]
+image::complayer/comp-layer-tut-14.png[]
+image::complayer/comp-layer-tut-15.png[]
+image::complayer/comp-layer-tut-16.png[]
+image::complayer/comp-layer-tut-17.png[]
+image::complayer/comp-layer-tut-18.png[]
+image::complayer/comp-layer-tut-19.png[]
+image::complayer/comp-layer-tut-20.png[]
+image::complayer/comp-layer-tut-21.png[]
 
 == References ==
 https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
