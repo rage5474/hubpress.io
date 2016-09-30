@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:50:11 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:53:16 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -250,7 +250,7 @@ We separate this again in a new plug-in. We start again with <strong>File &#8594
 </div>
 </div>
 <div class="paragraph">
-<p>Now we have to configure our product. Open the product file (<em>example.product</em>) by double clicking. Click on new and select the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> in the field <strong>Defining Plug-in</strong> and enter a <strong>Product ID</strong>, e.g. <em>rcp_product</em>. Click <strong>Finish</strong>.</p>
+<p>Now we have to configure our product. Open the product file (<em>example.product</em>) by double clicking. Click on new and select the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> in the field <strong>Defining Plug-in</strong> and enter a <strong>Product ID</strong>, e.g. <em>rcp_product</em>. Before clicking <strong>Finish</strong> switch the toogle button from <strong>plug-ins</strong> to <strong>features</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
