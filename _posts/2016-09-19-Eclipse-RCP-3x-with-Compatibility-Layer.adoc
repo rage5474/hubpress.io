@@ -16,25 +16,34 @@ Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3
 == Tutorial ==
 To create a simple feature-based Eclipse RCP 3.x application we need for plug-ins:
 
-* One plug-in with UI logic (here only an example table): +io.rage5474.rcp.example.ui.plugin+
-* One feature plug-in with represents the feature for the UI plug-in(s): +io.rage5474.rcp.example.ui.feature+
-* One target platform plug-in, which contains only the taegt platform file: +io.rage5474.rcp.example.tp+
-* One product plug-in, which contains the product configuration: +io.rage5474.rcp.example.product+
+* One plug-in with UI logic (here only an example table): _io.rage5474.rcp.example.ui.plugin_
+* One feature plug-in with represents the feature for the UI plug-in(s): _io.rage5474.rcp.example.ui.feature_
+* One target platform plug-in, which contains only the taegt platform file: _io.rage5474.rcp.example.tp_
+* One product plug-in, which contains the product configuration: _io.rage5474.rcp.example.product_
 
 So let us start. 
 
 === Create sample plug-in ===
-First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to File -> New -> Other and select Plug-in Project.
+First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to *File -> New -> Other* and select *Plug-in Project*.
 
 image::complayer/comp-layer-tut-1.png[width=500,link="/images/complayer/comp-layer-tut-1.png"]
 
-After clicking Next you have to add your plug-in name, here +io.rage5474.rcp.example.ui.plugin+.
-
+After clicking *Next* you have to add your plug-in name, here _io.rage5474.rcp.example.ui.plugin_.
 
 image::complayer/comp-layer-tut-2.png[width=500,link="/images/complayer/comp-layer-tut-2.png"]
+
+After clicking *Next* we have to select the option *Would you like to create a rich client application?* to *Yes*. 
+
 image::complayer/comp-layer-tut-3.png[width=500,link="/images/complayer/comp-layer-tut-3.png"]
+
+Again a click on *Next* leads us to the plug-in generator. Select here *RCP 3.x application with a view* 
+
 image::complayer/comp-layer-tut-4.png[width=500,link="/images/complayer/comp-layer-tut-4.png"]
+
+and *Finish* the dialog. In the end you should have a new plug-in in your workspace, that looks similar to this one:
+
 image::complayer/comp-layer-tut-5.png[width=1024,link="/images/complayer/comp-layer-tut-5.png"]
+
 === Create sample feature ===
 image::complayer/comp-layer-tut-6.png[width=500,link="/images/complayer/comp-layer-tut-6.png"]
 image::complayer/comp-layer-tut-7.png[width=1024,link="/images/complayer/comp-layer-tut-7.png"]
