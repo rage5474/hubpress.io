@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:28:03 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:40:35 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -54,107 +54,107 @@
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-1.png" alt="comp layer tut 1.png">
+<a class="image" href="/images/complayer/comp-layer-tut-1.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-1.png" alt="comp layer tut 1.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-2.png" alt="comp layer tut 2.png">
+<a class="image" href="/images/complayer/comp-layer-tut-2.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-2.png" alt="comp layer tut 2.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-3.png" alt="comp layer tut 3.png">
+<a class="image" href="/images/complayer/comp-layer-tut-3.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-3.png" alt="comp layer tut 3.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-4.png" alt="comp layer tut 4.png">
+<a class="image" href="/images/complayer/comp-layer-tut-4.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-4.png" alt="comp layer tut 4.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png">
+<a class="image" href="/images/complayer/comp-layer-tut-5.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png">
+<a class="image" href="/images/complayer/comp-layer-tut-6.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png">
+<a class="image" href="/images/complayer/comp-layer-tut-7.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png">
+<a class="image" href="/images/complayer/comp-layer-tut-8.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-9.png" alt="comp layer tut 9.png">
+<a class="image" href="/images/complayer/comp-layer-tut-9.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-9.png" alt="comp layer tut 9.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-10.png" alt="comp layer tut 10.png">
+<a class="image" href="/images/complayer/comp-layer-tut-10.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-10.png" alt="comp layer tut 10.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-11.png" alt="comp layer tut 11.png">
+<a class="image" href="/images/complayer/comp-layer-tut-11.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-11.png" alt="comp layer tut 11.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-12.png" alt="comp layer tut 12.png">
+<a class="image" href="/images/complayer/comp-layer-tut-12.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-12.png" alt="comp layer tut 12.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png">
+<a class="image" href="/images/complayer/comp-layer-tut-13.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png">
+<a class="image" href="/images/complayer/comp-layer-tut-14.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png">
+<a class="image" href="/images/complayer/comp-layer-tut-15.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png">
+<a class="image" href="/images/complayer/comp-layer-tut-16.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png">
+<a class="image" href="/images/complayer/comp-layer-tut-17.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png" width="500"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png">
+<a class="image" href="/images/complayer/comp-layer-tut-18.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png">
+<a class="image" href="/images/complayer/comp-layer-tut-19.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png">
+<a class="image" href="/images/complayer/comp-layer-tut-20.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png" width="1024"></a>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png">
+<a class="image" href="/images/complayer/comp-layer-tut-21.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png" width="400"></a>
 </div>
 </div>
 </div>
