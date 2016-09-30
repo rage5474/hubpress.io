@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:44:57 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:51:26 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -50,6 +50,25 @@
 <div class="sect1">
 <h2 id="_tutorial">Tutorial</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>To create a simple feature-based Eclipse RCP 3.x application we need for plug-ins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>One plug-in with UI logic (here only an example table): io.rage5474.rcp.example.ui.plugin</p>
+</li>
+<li>
+<p>One feature plug-in with represents the feature for the UI plug-in(s): io.rage5474.rcp.example.ui.feature</p>
+</li>
+<li>
+<p>One target platform plug-in, which contains only the taegt platform file: io.rage5474.rcp.example.tp</p>
+</li>
+<li>
+<p>One product plug-in, which contains the product configuration: io.rage5474.rcp.example.product</p>
+</li>
+</ul>
+</div>
 <div class="sect2">
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="imageblock">
