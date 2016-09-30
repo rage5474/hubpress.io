@@ -12,17 +12,17 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475226164489"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475226164489"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475226795862"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475226795862"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475226164489" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475226164489" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475226795862" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475226795862" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475226164489">
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475226795862">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475226164489" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475226164489" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475226795862" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475226795862" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
@@ -199,7 +199,7 @@ null
 <div class="sect2">
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="paragraph">
-<p>First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
+<p>First we create the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -238,18 +238,33 @@ null
 <a class="image" href="/images/complayer/comp-layer-tut-5.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Cool, first step was successful. Let us go on.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_create_sample_feature">Create sample feature</h3>
+<div class="paragraph">
+<p>As I think it is better to work with feature (groups of plug-ins) instead of working only with plug-ins, we have to create a feature plug-in, that contains in the end only one plug-in. We name the feature plug-in <em>io.rage5474.rcp.example.ui.feature</em>.</p>
+</div>
+<div class="paragraph">
+<p>So start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Feature Project</strong>. Enter the feature name <em>io.rage5474.rcp.example.ui.feature</em> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-6.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Now you should have a second plug-in in your workspace. Open the file <em>feature.xml</em> (simply be double-click), which is located in <em>io.rage5474.rcp.example.ui.feature</em>. Go to the tab <em>Included Plug-ins</em> on the bottom of the editor and click <strong>Add</strong>. A new window should come up. Select the plug-in with the name <em>io.rage5474.rcp.example.ui.plugin</em> and click <strong>OK</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-7.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png" width="1024"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Save the feature file (CTRL-S).</p>
 </div>
 </div>
 <div class="sect2">
@@ -408,9 +423,9 @@ null
       </script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475226164489"></script>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475226795862"></script>
     <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475226164489"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475226795862"></script>
 
     <script>
       $(document).foundation();
