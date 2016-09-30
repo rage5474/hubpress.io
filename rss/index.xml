@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:40:35 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:44:57 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -77,6 +77,9 @@
 <a class="image" href="/images/complayer/comp-layer-tut-5.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png" width="1024"></a>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_create_sample_feature">Create sample feature</h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-6.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png" width="500"></a>
@@ -87,6 +90,9 @@
 <a class="image" href="/images/complayer/comp-layer-tut-7.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png" width="1024"></a>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_create_target_platform_plug_in">Create target platform plug-in</h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-8.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png" width="500"></a>
@@ -122,6 +128,9 @@
 <a class="image" href="/images/complayer/comp-layer-tut-14.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png" width="500"></a>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_create_sample_product">Create sample product</h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-15.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png" width="500"></a>
@@ -152,6 +161,9 @@
 <a class="image" href="/images/complayer/comp-layer-tut-20.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png" width="1024"></a>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_launch_example_application">Launch example application</h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-21.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png" width="400"></a>
