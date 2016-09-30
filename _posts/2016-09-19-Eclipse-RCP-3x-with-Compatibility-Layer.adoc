@@ -24,7 +24,7 @@ To create a simple feature-based Eclipse RCP 3.x application we need for plug-in
 So let us start. 
 
 === Create sample plug-in ===
-First we create the plug-in _io.rage5474.rcp.example.ui.plugin_ with our simple application logic. Therefore we use the integrated plug-in generator. Go to *File -> New -> Other* and select *Plug-in Project*.
+First we create the plug-in _io.rage5474.rcp.example.ui.plugin_ with our simple application logic. Therefore we use the integrated plug-in generator. Go to *File -> New -> Other* and select *Plug-in Project* from the folder *Plug-in Development*.
 
 image::complayer/comp-layer-tut-1.png[width=500,link="/images/complayer/comp-layer-tut-1.png"]
 
@@ -50,7 +50,7 @@ Cool, first step was successful. Let us go on.
 
 As I think it is better to work with feature (groups of plug-ins) instead of working only with plug-ins, we have to create a feature plug-in, that contains in the end only one plug-in. We name the feature plug-in _io.rage5474.rcp.example.ui.feature_.
 
-So start again with *File -> New -> Other* and select *Feature Project*. Enter the feature name _io.rage5474.rcp.example.ui.feature_ and click *Finish*.
+So start again with *File -> New -> Other* and select *Feature Project* from the folder *Plug-in Development*. Enter the feature name _io.rage5474.rcp.example.ui.feature_ and click *Finish*.
 
 image::complayer/comp-layer-tut-6.png[width=500,link="/images/complayer/comp-layer-tut-6.png"]
 
@@ -58,16 +58,44 @@ Now you should have a second plug-in in your workspace. Open the file _feature.x
 
 image::complayer/comp-layer-tut-7.png[width=1024,link="/images/complayer/comp-layer-tut-7.png"]
 
-Save the feature file (CTRL-S). 
+Save the _feature.xml_ file (_CTRL-S_). 
+
+So step 2 was also successful! 
 
 === Create target platform plug-in ===
+
+Now we must create our target-platform (contains all Eclipse RCP plug-ins we need to get our application running!). I decided to use here Eclipse Mars as target platform. So we put the target platform file in a separate plug-in. We start again with *File -> New -> Other* and select *Project* from the folder *General*. Enter the corresponding plug-in name, here _io.rage5474.rcp.example.tp_ and click *Finish*.
+
 image::complayer/comp-layer-tut-8.png[width=500,link="/images/complayer/comp-layer-tut-8.png"]
+
+Now we add a Target Definition file to this project. Go to *File -> New -> Other* and select *Target Definition* from the folder *Plug-in Development* and click *Next*.
+
 image::complayer/comp-layer-tut-9.png[width=500,link="/images/complayer/comp-layer-tut-9.png"]
+
+Now select the our target platform plug-in _io.rage5474.rcp.example.tp_, add _mars.target_ as *File name* and select the option *Nothing* from the section *Initialize the target definition with:* and click *Finish*.
+
 image::complayer/comp-layer-tut-10.png[width=500,link="/images/complayer/comp-layer-tut-10.png"]
+
+Now we have our third plug-in. At the moment our Target Definition file is empty. So open it with a double-click on the file _mars.target_ and click the *Add* button to add a Software Site to this Target Definition. 
+
 image::complayer/comp-layer-tut-11.png[width=1024,link="/images/complayer/comp-layer-tut-11.png"]
+
+Select *Software Site* and click *Next*.
+
 image::complayer/comp-layer-tut-12.png[width=500,link="/images/complayer/comp-layer-tut-12.png"]
+
+Enter following URL in the field *Work with* and hit enter: _http://download.eclipse.org/releases/mars_ .
+Search and select following three features:
+
+* Eclipse RCP
+* Equinox p2, minimal support for RCP applications
+* Eclipse Platform Launcher Executables
+
 image::complayer/comp-layer-tut-13.png[width=500,link="/images/complayer/comp-layer-tut-13.png"]
 image::complayer/comp-layer-tut-14.png[width=500,link="/images/complayer/comp-layer-tut-14.png"]
+
+Click on *Finish* and click *Set as Target Platform*. After a while the target platform should be available. 
+
 === Create sample product ===
 image::complayer/comp-layer-tut-15.png[width=500,link="/images/complayer/comp-layer-tut-15.png"]
 image::complayer/comp-layer-tut-16.png[width=500,link="/images/complayer/comp-layer-tut-16.png"]
