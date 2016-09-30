@@ -140,6 +140,10 @@ The result should look similar to this:
 
 image::complayer/comp-layer-tut-21.png[width=400,link="/images/complayer/comp-layer-tut-21.png"]
 
+== Source Code ==
+
+The full example source code can also be found here: https://github.com/rage5474/rcp.3.x.comp.layer.example .
+
 == References ==
 https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
 http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/
