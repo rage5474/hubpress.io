@@ -24,7 +24,7 @@ To create a simple feature-based Eclipse RCP 3.x application we need for plug-in
 So let us start. 
 
 === Create sample plug-in ===
-First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to *File -> New -> Other* and select *Plug-in Project*.
+First we create the plug-in _io.rage5474.rcp.example.ui.plugin_ with our simple application logic. Therefore we use the integrated plug-in generator. Go to *File -> New -> Other* and select *Plug-in Project*.
 
 image::complayer/comp-layer-tut-1.png[width=500,link="/images/complayer/comp-layer-tut-1.png"]
 
@@ -44,9 +44,22 @@ and *Finish* the dialog. In the end you should have a new plug-in in your worksp
 
 image::complayer/comp-layer-tut-5.png[width=1024,link="/images/complayer/comp-layer-tut-5.png"]
 
+Cool, first step was successful. Let us go on.
+
 === Create sample feature ===
+
+As I think it is better to work with feature (groups of plug-ins) instead of working only with plug-ins, we have to create a feature plug-in, that contains in the end only one plug-in. We name the feature plug-in _io.rage5474.rcp.example.ui.feature_.
+
+So start again with *File -> New -> Other* and select *Feature Project*. Enter the feature name _io.rage5474.rcp.example.ui.feature_ and click *Finish*.
+
 image::complayer/comp-layer-tut-6.png[width=500,link="/images/complayer/comp-layer-tut-6.png"]
+
+Now you should have a second plug-in in your workspace. Open the file _feature.xml_ (simply be double-click), which is located in _io.rage5474.rcp.example.ui.feature_. Go to the tab _Included Plug-ins_ on the bottom of the editor and click *Add*. A new window should come up. Select the plug-in with the name _io.rage5474.rcp.example.ui.plugin_ and click *OK*. 
+
 image::complayer/comp-layer-tut-7.png[width=1024,link="/images/complayer/comp-layer-tut-7.png"]
+
+Save the feature file (CTRL-S). 
+
 === Create target platform plug-in ===
 image::complayer/comp-layer-tut-8.png[width=500,link="/images/complayer/comp-layer-tut-8.png"]
 image::complayer/comp-layer-tut-9.png[width=500,link="/images/complayer/comp-layer-tut-9.png"]
