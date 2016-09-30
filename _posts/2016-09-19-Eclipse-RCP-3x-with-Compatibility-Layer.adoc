@@ -92,19 +92,54 @@ Search and select following three features:
 * Eclipse Platform Launcher Executables
 
 image::complayer/comp-layer-tut-13.png[width=500,link="/images/complayer/comp-layer-tut-13.png"]
+
+Use the search field to find the right feature fast. Tip: Disable *Group by Category*.
+
 image::complayer/comp-layer-tut-14.png[width=500,link="/images/complayer/comp-layer-tut-14.png"]
 
 Click on *Finish* and click *Set as Target Platform*. After a while the target platform should be available. 
 
 === Create sample product ===
+
+So we almost finished. We only need the possibility to start our application, therefore we need a product file. 
+We separate this again in a new plug-in. We start again with *File -> New -> Other* and select *Project* from the folder *General* and enter the plug-ins name _io.rage5474.rcp.example.product_ and click *Finish*. 
+
 image::complayer/comp-layer-tut-15.png[width=500,link="/images/complayer/comp-layer-tut-15.png"]
+
+Now we have to add a *Product Configuration* file to that plug-in. We create this with *File -> New -> Other* and select *Product Configuration* from the folder *Plug-in Development* and click *Next*.
+
 image::complayer/comp-layer-tut-16.png[width=500,link="/images/complayer/comp-layer-tut-16.png"]
+
+Select the right plug-in (_io.rage5474.rcp.example.product_) and enter a product configuration file name, here _example.product_ and click Finish.
+
 image::complayer/comp-layer-tut-17.png[width=500,link="/images/complayer/comp-layer-tut-17.png"]
+
+Now we have to configure our product. Open the product file (_example.product_) by double clicking. Click on new and select the plug-in _io.rage5474.rcp.example.ui.plugin_ in the field *Defining Plug-in* and enter a *Product ID*, e.g. _rcp_product_. Click *Finish*.
+
 image::complayer/comp-layer-tut-18.png[width=1024,link="/images/complayer/comp-layer-tut-18.png"]
+
+Now switch to the tab *Contents* and add following feature by clicking on the *Add* button:
+
+* org.eclipse.rcp
+* org.eclipse.emf.common
+* org.eclipse.emf.ecore
+* io.rage5474.rcp.example.ui.feature
+
 image::complayer/comp-layer-tut-19.png[width=1024,link="/images/complayer/comp-layer-tut-19.png"]
+
+Now we have to modify the run configuration. Switch to the tab *Configuration* and select *Add Recommended*.
+
 image::complayer/comp-layer-tut-20.png[width=1024,link="/images/complayer/comp-layer-tut-20.png"]
+
+Save your product definition file (_CTRL-S_) and switch back to the tab *Overview* and click the link _Synchronize_ from the section *Test*. 
+
 === Launch example application ===
+
+Now we can give it a try. Click the link _Launch an Eclipse Application_ again from the section *Testing*.
+The result should look similar to this:
+
 image::complayer/comp-layer-tut-21.png[width=400,link="/images/complayer/comp-layer-tut-21.png"]
+
 == References ==
 https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
 http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/
