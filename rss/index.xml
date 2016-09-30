@@ -1,4 +1,175 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 30 Aug 2016 20:07:46 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Declarative Annotations in Eclipse Neon]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:28:03 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version.</p>
+</li>
+<li>
+<p>There are a few descriptions in the internet what must be done to use the Compatibility Layer, but no step-by-step tutorial</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background">Background</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If you not know what the compatibility layer is than read this <a href="https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php" class="bare">https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php</a></p>
+</li>
+<li>
+<p>If you want more background information about migrating strategies of Eclipse RCP 3.x than read this <a href="http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/" class="bare">http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisite">Prerequisite</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Download Eclipse RCP and RAP for Mars from here <a href="http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2" class="bare">http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tutorial">Tutorial</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_sample_plug_in">Create sample plug-in</h3>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-1.png" alt="comp layer tut 1.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-2.png" alt="comp layer tut 2.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-3.png" alt="comp layer tut 3.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-4.png" alt="comp layer tut 4.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-9.png" alt="comp layer tut 9.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-10.png" alt="comp layer tut 10.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-11.png" alt="comp layer tut 11.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-12.png" alt="comp layer tut 12.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php" class="bare">https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php</a>
+<a href="http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/" class="bare">http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/</a>
+<a href="http://www.vogella.com/tutorials/Eclipse4MigrationGuide/article.html" class="bare">http://www.vogella.com/tutorials/Eclipse4MigrationGuide/article.html</a></p>
+</div>
+</div>
+</div>]]></description><link>https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html</link><guid isPermaLink="true">https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html</guid><pubDate>Mon, 19 Sep 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Declarative Annotations in Eclipse Neon]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
