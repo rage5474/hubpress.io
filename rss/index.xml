@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 08:57:51 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:02:44 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -56,16 +56,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>One plug-in with UI logic (here only an example table): io.rage5474.rcp.example.ui.plugin</p>
+<p>One plug-in with UI logic (here only an example table): <em>io.rage5474.rcp.example.ui.plugin</em></p>
 </li>
 <li>
-<p>One feature plug-in with represents the feature for the UI plug-in(s): io.rage5474.rcp.example.ui.feature</p>
+<p>One feature plug-in with represents the feature for the UI plug-in(s): <em>io.rage5474.rcp.example.ui.feature</em></p>
 </li>
 <li>
-<p>One target platform plug-in, which contains only the taegt platform file: io.rage5474.rcp.example.tp</p>
+<p>One target platform plug-in, which contains only the taegt platform file: <em>io.rage5474.rcp.example.tp</em></p>
 </li>
 <li>
-<p>One product plug-in, which contains the product configuration: io.rage5474.rcp.example.product</p>
+<p>One product plug-in, which contains the product configuration: <em>io.rage5474.rcp.example.product</em></p>
 </li>
 </ul>
 </div>
@@ -75,7 +75,7 @@
 <div class="sect2">
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="paragraph">
-<p>First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to File &#8594; New &#8594; Other and select Plug-in Project.</p>
+<p>First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -83,22 +83,31 @@
 </div>
 </div>
 <div class="paragraph">
-<p>After clicking Next you have to add your plug-in name, here io.rage5474.rcp.example.ui.plugin.</p>
+<p>After clicking <strong>Next</strong> you have to add your plug-in name, here <em>io.rage5474.rcp.example.ui.plugin</em>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-2.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-2.png" alt="comp layer tut 2.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>After clicking <strong>Next</strong> we have to select the option <strong>Would you like to create a rich client application?</strong> to <strong>Yes</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-3.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-3.png" alt="comp layer tut 3.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Again a click on <strong>Next</strong> leads us to the plug-in generator. Select here <strong>RCP 3.x application with a view</strong></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-4.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-4.png" alt="comp layer tut 4.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>and <strong>Finish</strong> the dialog. In the end you should have a new plug-in in your workspace, that looks similar to this one:</p>
 </div>
 <div class="imageblock">
 <div class="content">
