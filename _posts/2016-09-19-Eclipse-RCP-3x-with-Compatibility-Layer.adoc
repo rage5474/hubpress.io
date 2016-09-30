@@ -114,7 +114,7 @@ Select the right plug-in (_io.rage5474.rcp.example.product_) and enter a product
 
 image::complayer/comp-layer-tut-17.png[width=500,link="/images/complayer/comp-layer-tut-17.png"]
 
-Now we have to configure our product. Open the product file (_example.product_) by double clicking. Click on new and select the plug-in _io.rage5474.rcp.example.ui.plugin_ in the field *Defining Plug-in* and enter a *Product ID*, e.g. _rcp_product_. Click *Finish*.
+Now we have to configure our product. Open the product file (_example.product_) by double clicking. Click on new and select the plug-in _io.rage5474.rcp.example.ui.plugin_ in the field *Defining Plug-in* and enter a *Product ID*, e.g. _rcp_product_. Before clicking *Finish* switch the toogle button from *plug-ins* to *features*.
 
 image::complayer/comp-layer-tut-18.png[width=1024,link="/images/complayer/comp-layer-tut-18.png"]
 
