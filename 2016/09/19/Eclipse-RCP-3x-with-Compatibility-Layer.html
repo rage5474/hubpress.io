@@ -12,17 +12,17 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475226795862"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475226795862"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475227941666"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475227941666"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475226795862" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475226795862" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475227941666" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475227941666" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475226795862">
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475227941666">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475226795862" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475226795862" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475227941666" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475227941666" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
@@ -199,7 +199,7 @@ null
 <div class="sect2">
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="paragraph">
-<p>First we create the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
+<p>First we create the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong> from the folder <strong>Plug-in Development</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -248,7 +248,7 @@ null
 <p>As I think it is better to work with feature (groups of plug-ins) instead of working only with plug-ins, we have to create a feature plug-in, that contains in the end only one plug-in. We name the feature plug-in <em>io.rage5474.rcp.example.ui.feature</em>.</p>
 </div>
 <div class="paragraph">
-<p>So start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Feature Project</strong>. Enter the feature name <em>io.rage5474.rcp.example.ui.feature</em> and click <strong>Finish</strong>.</p>
+<p>So start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Feature Project</strong> from the folder <strong>Plug-in Development</strong>. Enter the feature name <em>io.rage5474.rcp.example.ui.feature</em> and click <strong>Finish</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -264,35 +264,70 @@ null
 </div>
 </div>
 <div class="paragraph">
-<p>Save the feature file (CTRL-S).</p>
+<p>Save the <em>feature.xml</em> file (<em>CTRL-S</em>).</p>
+</div>
+<div class="paragraph">
+<p>So step 2 was also successful!</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_create_target_platform_plug_in">Create target platform plug-in</h3>
+<div class="paragraph">
+<p>Now we must create our target-platform (contains all Eclipse RCP plug-ins we need to get our application running!). I decided to use here Eclipse Mars as target platform. So we put the target platform file in a separate plug-in. We start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Project</strong> from the folder <strong>General</strong>. Enter the corresponding plug-in name, here <em>io.rage5474.rcp.example.tp</em> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-8.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we add a Target Definition file to this project. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Target Definition</strong> from the folder <strong>Plug-in Development</strong> and click <strong>Next</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-9.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-9.png" alt="comp layer tut 9.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Now select the our target platform plug-in <em>io.rage5474.rcp.example.tp</em>, add <em>mars.target</em> as <strong>File name</strong> and select the option <strong>Nothing</strong> from the section <strong>Initialize the target definition with:</strong> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-10.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-10.png" alt="comp layer tut 10.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have our third plug-in. At the moment our Target Definition file is empty. So open it with a double-click on the file <em>mars.target</em> and click the <strong>Add</strong> button to add a Software Site to this Target Definition.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-11.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-11.png" alt="comp layer tut 11.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Select <strong>Software Site</strong> and click <strong>Next</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-12.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-12.png" alt="comp layer tut 12.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Enter following URL in the field <strong>Work with</strong> and hit enter: <em><a href="http://download.eclipse.org/releases/mars" class="bare">http://download.eclipse.org/releases/mars</a></em> .
+Search and select following three features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Eclipse RCP</p>
+</li>
+<li>
+<p>Equinox p2, minimal support for RCP applications</p>
+</li>
+<li>
+<p>Eclipse Platform Launcher Executables</p>
+</li>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -303,6 +338,9 @@ null
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-14.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Click on <strong>Finish</strong> and click <strong>Set as Target Platform</strong>. After a while the target platform should be available.</p>
 </div>
 </div>
 <div class="sect2">
@@ -423,9 +461,9 @@ null
       </script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475226795862"></script>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475227941666"></script>
     <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475226795862"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475227941666"></script>
 
     <script>
       $(document).foundation();
