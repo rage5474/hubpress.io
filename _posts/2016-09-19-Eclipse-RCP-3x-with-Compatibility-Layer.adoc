@@ -20,8 +20,10 @@ image::complayer/comp-layer-tut-2.png[width=500,link="/images/complayer/comp-lay
 image::complayer/comp-layer-tut-3.png[width=500,link="/images/complayer/comp-layer-tut-3.png"]
 image::complayer/comp-layer-tut-4.png[width=500,link="/images/complayer/comp-layer-tut-4.png"]
 image::complayer/comp-layer-tut-5.png[width=1024,link="/images/complayer/comp-layer-tut-5.png"]
+=== Create sample feature ===
 image::complayer/comp-layer-tut-6.png[width=500,link="/images/complayer/comp-layer-tut-6.png"]
 image::complayer/comp-layer-tut-7.png[width=1024,link="/images/complayer/comp-layer-tut-7.png"]
+=== Create target platform plug-in ===
 image::complayer/comp-layer-tut-8.png[width=500,link="/images/complayer/comp-layer-tut-8.png"]
 image::complayer/comp-layer-tut-9.png[width=500,link="/images/complayer/comp-layer-tut-9.png"]
 image::complayer/comp-layer-tut-10.png[width=500,link="/images/complayer/comp-layer-tut-10.png"]
@@ -29,12 +31,14 @@ image::complayer/comp-layer-tut-11.png[width=1024,link="/images/complayer/comp-l
 image::complayer/comp-layer-tut-12.png[width=500,link="/images/complayer/comp-layer-tut-12.png"]
 image::complayer/comp-layer-tut-13.png[width=500,link="/images/complayer/comp-layer-tut-13.png"]
 image::complayer/comp-layer-tut-14.png[width=500,link="/images/complayer/comp-layer-tut-14.png"]
+=== Create sample product ===
 image::complayer/comp-layer-tut-15.png[width=500,link="/images/complayer/comp-layer-tut-15.png"]
 image::complayer/comp-layer-tut-16.png[width=500,link="/images/complayer/comp-layer-tut-16.png"]
 image::complayer/comp-layer-tut-17.png[width=500,link="/images/complayer/comp-layer-tut-17.png"]
 image::complayer/comp-layer-tut-18.png[width=1024,link="/images/complayer/comp-layer-tut-18.png"]
 image::complayer/comp-layer-tut-19.png[width=1024,link="/images/complayer/comp-layer-tut-19.png"]
 image::complayer/comp-layer-tut-20.png[width=1024,link="/images/complayer/comp-layer-tut-20.png"]
+=== Launch example application ===
 image::complayer/comp-layer-tut-21.png[width=400,link="/images/complayer/comp-layer-tut-21.png"]
 == References ==
 https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php
