@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:02:44 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:13:15 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -75,7 +75,7 @@
 <div class="sect2">
 <h3 id="_create_sample_plug_in">Create sample plug-in</h3>
 <div class="paragraph">
-<p>First we create the plug-in io.rage5474.rcp.example.ui.plugin with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
+<p>First we create the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> with our simple application logic. Therefore we use the integrated plug-in generator. Go to <strong>File &#8594; New &#8594; Other</strong> and select <strong>Plug-in Project</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -114,18 +114,33 @@
 <a class="image" href="/images/complayer/comp-layer-tut-5.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Cool, first step was successful. Let us go on.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_create_sample_feature">Create sample feature</h3>
+<div class="paragraph">
+<p>As I think it is better to work with feature (groups of plug-ins) instead of working only with plug-ins, we have to create a feature plug-in, that contains in the end only one plug-in. We name the feature plug-in <em>io.rage5474.rcp.example.ui.feature</em>.</p>
+</div>
+<div class="paragraph">
+<p>So start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Feature Project</strong>. Enter the feature name <em>io.rage5474.rcp.example.ui.feature</em> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-6.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Now you should have a second plug-in in your workspace. Open the file <em>feature.xml</em> (simply be double-click), which is located in <em>io.rage5474.rcp.example.ui.feature</em>. Go to the tab <em>Included Plug-ins</em> on the bottom of the editor and click <strong>Add</strong>. A new window should come up. Select the plug-in with the name <em>io.rage5474.rcp.example.ui.plugin</em> and click <strong>OK</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-7.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png" width="1024"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Save the feature file (CTRL-S).</p>
 </div>
 </div>
 <div class="sect2">
