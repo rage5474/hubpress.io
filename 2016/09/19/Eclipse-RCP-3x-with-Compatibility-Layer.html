@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Eclipse RCP 3.x with Compatibility Layer</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
+
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475224083163"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475224083163"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475224083163" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475224083163" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475224083163">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475224083163" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475224083163" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
+
+    <link rel="canonical" href="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Eclipse RCP Blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eclipse RCP 3.x with Compatibility Layer" />
+    <meta property="og:description" content="Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars. Motivation There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version. There are a few descriptions in the internet what" />
+    <meta property="og:url" content="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Eclipse RCP 3.x with Compatibility Layer" />
+    <meta name="twitter:description" content="Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars. Motivation There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version. There are a few descriptions in the internet what" />
+    <meta name="twitter:url" content="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
+    
+    <script type="application/ld+json">
+null
+    </script>
+
+    <meta name="generator" content="HubPress" />
+    <link rel="alternate" type="application/rss+xml" title="Eclipse RCP Blog" href="https://rage5474.github.io/rss/" />
+</head>
+<body class="post-template">
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar >
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="https://rage5474.github.io"></a></li>
+    <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+            <li><a href="https://rage5474.github.io">Home</a></li>
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns right head-area" >
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                <li><a class="fi-home" href="https://rage5474.github.io"></a></li>
+                <li><a class="fi-torso" href="https://rage5474.github.io/about"></a></li>
+                <li><a class="fi-mail" href="https://rage5474.github.io/contact"></a></li>
+            </ul>
+            <a class="blog-logo" href="https://rage5474.github.io"><img alt="Eclipse RCP Blog" src="/images/ich.jpg" alt="Blog Logo" /></a>
+            <h1 class="blog-title">Eclipse RCP Blog</h1>
+            <hr>
+            <p class="blog-description">Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... </p>
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+
+<div class="small-16 medium-16 large-12 columns main-column left">
+    
+
+<main class="content" role="main">
+
+    <article class="post">
+
+
+            <h1 class="post-title">Eclipse RCP 3.x with Compatibility Layer</h1>
+
+            <span class="post-meta label"><time datetime="2016-09-19">19 Sep 2016</time></span>
+
+            <section class="post-content">
+                <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>There exists many Eclipse RCP 3.x applications, which cannot be moved to the latest Eclipse RCP version.</p>
+</li>
+<li>
+<p>There are a few descriptions in the internet what must be done to use the Compatibility Layer, but no step-by-step tutorial</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background">Background</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If you not know what the compatibility layer is than read this <a href="https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php" class="bare">https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php</a></p>
+</li>
+<li>
+<p>If you want more background information about migrating strategies of Eclipse RCP 3.x than read this <a href="http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/" class="bare">http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisite">Prerequisite</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Download Eclipse RCP and RAP for Mars from here <a href="http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2" class="bare">http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tutorial">Tutorial</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_sample_plug_in">Create sample plug-in</h3>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-1.png" alt="comp layer tut 1.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-2.png" alt="comp layer tut 2.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-3.png" alt="comp layer tut 3.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-4.png" alt="comp layer tut 4.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-5.png" alt="comp layer tut 5.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-6.png" alt="comp layer tut 6.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-7.png" alt="comp layer tut 7.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-8.png" alt="comp layer tut 8.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-9.png" alt="comp layer tut 9.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-10.png" alt="comp layer tut 10.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-11.png" alt="comp layer tut 11.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-12.png" alt="comp layer tut 12.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php" class="bare">https://www.eclipse.org/community/eclipse_newsletter/2013/february/article3.php</a>
+<a href="http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/" class="bare">http://eclipsesource.com/blogs/2016/01/08/migrating-from-eclipse-3-x-to-eclipse-4-e4/</a>
+<a href="http://www.vogella.com/tutorials/Eclipse4MigrationGuide/article.html" class="bare">http://www.vogella.com/tutorials/Eclipse4MigrationGuide/article.html</a></p>
+</div>
+</div>
+</div>
+                        <aside class="tags fi-pricetag-multiple">No tag</aside>
+            </section>
+            <hr>
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Liked this post ? Share it.</h4>
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    </a>
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=Eclipse%20RCP%203.x%20with%20Compatibility%20Layer&amp;url=https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    </a>
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    </a>
+                </section>
+
+                <section class="author">
+                    <header>
+                        <span>About the author</span>
+                    </header>
+                    <section>
+                        <h4>rage5474</h4>
+                        <img src="https://avatars.githubusercontent.com/u/12368367?v&#x3D;3">
+                        
+                        
+                    </section>
+                    <footer>
+                         <p></p>
+                    </footer>
+                </section>
+
+        <div class="clearfix"></div>
+                    <hr>
+
+            </footer>
+
+        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
+
+
+
+
+    </article>
+
+</main>
+
+</div>
+
+</div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();
+      </script>
+
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475224083163"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475224083163"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+</html>
