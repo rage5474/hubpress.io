@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:32:21 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 09:50:11 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
@@ -210,6 +210,9 @@ Search and select following three features:</p>
 <a class="image" href="/images/complayer/comp-layer-tut-13.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Use the search field to find the right feature fast. Tip: Disable <strong>Group by Category</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-14.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png" width="500"></a>
@@ -221,39 +224,81 @@ Search and select following three features:</p>
 </div>
 <div class="sect2">
 <h3 id="_create_sample_product">Create sample product</h3>
+<div class="paragraph">
+<p>So we almost finished. We only need the possibility to start our application, therefore we need a product file.
+We separate this again in a new plug-in. We start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Project</strong> from the folder <strong>General</strong> and enter the plug-ins name <em>io.rage5474.rcp.example.product</em> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-15.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to add a <strong>Product Configuration</strong> file to that plug-in. We create this with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Product Configuration</strong> from the folder <strong>Plug-in Development</strong> and click <strong>Next</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-16.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Select the right plug-in (<em>io.rage5474.rcp.example.product</em>) and enter a product configuration file name, here <em>example.product</em> and click Finish.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-17.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to configure our product. Open the product file (<em>example.product</em>) by double clicking. Click on new and select the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> in the field <strong>Defining Plug-in</strong> and enter a <strong>Product ID</strong>, e.g. <em>rcp_product</em>. Click <strong>Finish</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-18.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Now switch to the tab <strong>Contents</strong> and add following feature by clicking on the <strong>Add</strong> button:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>org.eclipse.rcp</p>
+</li>
+<li>
+<p>org.eclipse.emf.common</p>
+</li>
+<li>
+<p>org.eclipse.emf.ecore</p>
+</li>
+<li>
+<p>io.rage5474.rcp.example.ui.feature</p>
+</li>
+</ul>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-19.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png" width="1024"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to modify the run configuration. Switch to the tab <strong>Configuration</strong> and select <strong>Add Recommended</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-20.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Save your product definition file (<em>CTRL-S</em>) and switch back to the tab <strong>Overview</strong> and click the link <em>Synchronize</em> from the section <strong>Test</strong>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_launch_example_application">Launch example application</h3>
+<div class="paragraph">
+<p>Now we can give it a try. Click the link <em>Launch an Eclipse Application</em> again from the section <strong>Testing</strong>.
+The result should look similar to this:</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-21.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png" width="400"></a>
