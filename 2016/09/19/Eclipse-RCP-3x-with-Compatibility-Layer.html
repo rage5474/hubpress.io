@@ -12,17 +12,17 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475227941666"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475227941666"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1475229011758"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1475229011758"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475227941666" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475227941666" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1475229011758" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1475229011758" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475227941666">
+        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1475229011758">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475227941666" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475227941666" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1475229011758" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1475229011758" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://rage5474.github.io/2016/09/19/Eclipse-RCP-3x-with-Compatibility-Layer.html" />
@@ -334,6 +334,9 @@ Search and select following three features:</p>
 <a class="image" href="/images/complayer/comp-layer-tut-13.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-13.png" alt="comp layer tut 13.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Use the search field to find the right feature fast. Tip: Disable <strong>Group by Category</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-14.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-14.png" alt="comp layer tut 14.png" width="500"></a>
@@ -345,39 +348,81 @@ Search and select following three features:</p>
 </div>
 <div class="sect2">
 <h3 id="_create_sample_product">Create sample product</h3>
+<div class="paragraph">
+<p>So we almost finished. We only need the possibility to start our application, therefore we need a product file.
+We separate this again in a new plug-in. We start again with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Project</strong> from the folder <strong>General</strong> and enter the plug-ins name <em>io.rage5474.rcp.example.product</em> and click <strong>Finish</strong>.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-15.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-15.png" alt="comp layer tut 15.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to add a <strong>Product Configuration</strong> file to that plug-in. We create this with <strong>File &#8594; New &#8594; Other</strong> and select <strong>Product Configuration</strong> from the folder <strong>Plug-in Development</strong> and click <strong>Next</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-16.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-16.png" alt="comp layer tut 16.png" width="500"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Select the right plug-in (<em>io.rage5474.rcp.example.product</em>) and enter a product configuration file name, here <em>example.product</em> and click Finish.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-17.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-17.png" alt="comp layer tut 17.png" width="500"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to configure our product. Open the product file (<em>example.product</em>) by double clicking. Click on new and select the plug-in <em>io.rage5474.rcp.example.ui.plugin</em> in the field <strong>Defining Plug-in</strong> and enter a <strong>Product ID</strong>, e.g. <em>rcp_product</em>. Click <strong>Finish</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-18.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-18.png" alt="comp layer tut 18.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Now switch to the tab <strong>Contents</strong> and add following feature by clicking on the <strong>Add</strong> button:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>org.eclipse.rcp</p>
+</li>
+<li>
+<p>org.eclipse.emf.common</p>
+</li>
+<li>
+<p>org.eclipse.emf.ecore</p>
+</li>
+<li>
+<p>io.rage5474.rcp.example.ui.feature</p>
+</li>
+</ul>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-19.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-19.png" alt="comp layer tut 19.png" width="1024"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>Now we have to modify the run configuration. Switch to the tab <strong>Configuration</strong> and select <strong>Add Recommended</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-20.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-20.png" alt="comp layer tut 20.png" width="1024"></a>
 </div>
 </div>
+<div class="paragraph">
+<p>Save your product definition file (<em>CTRL-S</em>) and switch back to the tab <strong>Overview</strong> and click the link <em>Synchronize</em> from the section <strong>Test</strong>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_launch_example_application">Launch example application</h3>
+<div class="paragraph">
+<p>Now we can give it a try. Click the link <em>Launch an Eclipse Application</em> again from the section <strong>Testing</strong>.
+The result should look similar to this:</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="/images/complayer/comp-layer-tut-21.png"><img src="https://rage5474.github.io/images/complayer/comp-layer-tut-21.png" alt="comp layer tut 21.png" width="400"></a>
@@ -461,9 +506,9 @@ Search and select following three features:</p>
       </script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475227941666"></script>
+        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1475229011758"></script>
     <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475227941666"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1475229011758"></script>
 
     <script>
       $(document).foundation();
