@@ -14,6 +14,13 @@ Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3
 * Download Eclipse RCP and RAP for Mars from here http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/mars2
 
 == Tutorial ==
+To create a simple feature-based Eclipse RCP 3.x application we need for plug-ins:
+
+* One plug-in with UI logic (here only an example table): io.rage5474.rcp.example.ui.plugin
+* One feature plug-in with represents the feature for the UI plug-in(s): io.rage5474.rcp.example.ui.feature
+* One target platform plug-in, which contains only the taegt platform file: io.rage5474.rcp.example.tp
+* One product plug-in, which contains the product configuration: io.rage5474.rcp.example.product
+
 === Create sample plug-in ===
 image::complayer/comp-layer-tut-1.png[width=500,link="/images/complayer/comp-layer-tut-1.png"]
 image::complayer/comp-layer-tut-2.png[width=500,link="/images/complayer/comp-layer-tut-2.png"]
