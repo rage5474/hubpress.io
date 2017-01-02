@@ -9,7 +9,9 @@
     "description": "Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ",
     "logo": "/images/ich.jpg"
   },
-  "socialnetwork": {},
+  "socialnetwork": {
+    "github": "rage5474"
+  },
   "theme": {
     "name": "ichi"
   }
