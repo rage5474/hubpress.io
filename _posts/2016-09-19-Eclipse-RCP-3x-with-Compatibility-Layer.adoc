@@ -1,5 +1,5 @@
 = Eclipse RCP 3.x with Compatibility Layer =
-:keywords: [announcement, website]
+:keywords: Eclipse RCP
 
 Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.
 
