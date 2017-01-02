@@ -1,4 +1,5 @@
 = Declarative Annotations in Eclipse Neon =
+:hp-tags: Eclipse, RCP, Raphael Geissler, OSGi, Declarative Annotations, Eclipse Neon
 
 == Motivation ==
 Many Eclipse RCP applications are using OSGi Services make their application leightweight and flexible. The most convient method is to use OSGi Services in combination with Declarative Services. This allows to specifiy OSGi Services by XML files. Why this can be quite convient can be found here http://www.vogella.com/tutorials/OSGiServices/article.html#declarativeservices[DS@Vogella]. 
