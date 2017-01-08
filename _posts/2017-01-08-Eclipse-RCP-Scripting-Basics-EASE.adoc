@@ -1,0 +1,27 @@
+= Eclipse RCP Scripting Basics (EASE) =
+:hp-tags: Eclipse, Raphael Geissler, Scripting, EASE
+
+== Motivation ==
+Last time I thought that I would be nice to evaluate automated the output of an application started by Eclipse. E.g. to get an error dialog message when an exception is thrown or at least see an log entry in the Error Log View. Then I thought I would be nice to enable the Eclipse User to write directly a script in Eclipse that evaluates the console output directy. We implemented a similar approach in our Eclipse RCP based application at Elektrobit. After a few minutes searching the internet I found the Eclipse project EASE, that is enabling scripting for Eclipse. But I found not that much tutorials for that and that's why I want to blog about it. 
+
+== Installation ==
+
+I tested the installation with a clean Mars (Version 2) Eclipse. The download links for EASE can be found hier http://www.eclipse.org/ease/download/ .
+
+Installation is as usual:
+
+- Start Eclipse
+- *Help* -> *Install New Software...*
+- Enter following address in the *Work with* field: 
+* http://download.eclipse.org/ease/update/release (Currently release 0.3.0) or
+* http://download.eclipse.org/ease/update/nightly (Currently release 0.4.0 - don't know when it will be released)
+- Check all features and click *Next* and
+- again *Next* and
+- accept licenses and click *Finish* and
+- accept warning dialog and
+- restart Eclipse after installation has finished.
+
+
+
+
+
