@@ -26,6 +26,7 @@ There is a special perspective for scripting, to activate is simple click *CTRL-
 and select select *Scripting* from the *Perspective* section. 
 
 After the perspective switch your Eclipse should look like this:
+
 image:ease/01-ease-scripting-view.png[width=500,link="/images/ease/01-ease-scripting-view.png"]
 
 
