@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Jan 2017 08:00:17 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Jan 2017 08:01:23 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -64,7 +64,7 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 </div>
 <div class="paragraph">
 <p>After the perspective switch your Eclipse should look like this:
-image::ease/01-ease-scripting-view.png[width=500,link="/images/ease/01-ease-scripting-view.png"]</p>
+<span class="image"><a class="image" href="/images/ease/01-ease-scripting-view.png"><img src="https://rage5474.github.io/images/ease/01-ease-scripting-view.png" alt="01 ease scripting view.png" width="500"></a></span></p>
 </div>
 </div>
 </div>]]></description><link>https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</link><guid isPermaLink="true">https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</guid><category><![CDATA[Eclipse]]></category><category><![CDATA[ Raphael Geissler]]></category><category><![CDATA[ Scripting]]></category><category><![CDATA[ EASE]]></category><pubDate>Sun, 08 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
