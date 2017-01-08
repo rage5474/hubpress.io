@@ -21,6 +21,11 @@ Installation is as usual:
 - accept warning dialog and
 - restart Eclipse after installation has finished.
 
+== Basic usage ==
+There is a special perspective for scripting, to activate is simple click *CTRL-3* for *Quick Access* and type scripting
+and select select *Scripting* from the *Perspective* section. 
+
+After the perspective switch your Eclipse should look like this:
 
 
 
