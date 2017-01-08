@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Jan 2017 07:03:30 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Jan 2017 08:00:17 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Last time I thought that I would be nice to evaluate automated the output of an application started by Eclipse. E.g. to get an error dialog message when an exception is thrown or at least see an log entry in the Error Log View. Then I thought I would be nice to enable the Eclipse User to write directly a script in Eclipse that evaluates the console output directy. We implemented a similar approach in our Eclipse RCP based application at Elektrobit. After a few minutes searching the internet I found the Eclipse project EASE, that is enabling scripting for Eclipse. But I found not that much tutorials for that and that&#8217;s why I want to blog about it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I tested the installation with a clean Mars (Version 2) Eclipse. The download links for EASE can be found hier <a href="http://www.eclipse.org/ease/download/" class="bare">http://www.eclipse.org/ease/download/</a> .</p>
+</div>
+<div class="paragraph">
+<p>Installation is as usual:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start Eclipse</p>
+</li>
+<li>
+<p><strong>Help</strong> &#8594; <strong>Install New Software&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Enter following address in the <strong>Work with</strong> field:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://download.eclipse.org/ease/update/release" class="bare">http://download.eclipse.org/ease/update/release</a> (Currently release 0.3.0) or</p>
+</li>
+<li>
+<p><a href="http://download.eclipse.org/ease/update/nightly" class="bare">http://download.eclipse.org/ease/update/nightly</a> (Currently release 0.4.0 - don&#8217;t know when it will be released)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Check all features and click <strong>Next</strong> and</p>
+</li>
+<li>
+<p>again <strong>Next</strong> and</p>
+</li>
+<li>
+<p>accept licenses and click <strong>Finish</strong> and</p>
+</li>
+<li>
+<p>accept warning dialog and</p>
+</li>
+<li>
+<p>restart Eclipse after installation has finished.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_usage">Basic usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a special perspective for scripting, to activate is simple click <strong>CTRL-3</strong> for <strong>Quick Access</strong> and type scripting
+and select select <strong>Scripting</strong> from the <strong>Perspective</strong> section.</p>
+</div>
+<div class="paragraph">
+<p>After the perspective switch your Eclipse should look like this:
+image::ease/01-ease-scripting-view.png[width=500,link="/images/ease/01-ease-scripting-view.png"]</p>
+</div>
+</div>
+</div>]]></description><link>https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</link><guid isPermaLink="true">https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</guid><category><![CDATA[Eclipse]]></category><category><![CDATA[ Raphael Geissler]]></category><category><![CDATA[ Scripting]]></category><category><![CDATA[ EASE]]></category><pubDate>Sun, 08 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today I want to show a step-by-step tutorial how to build a simple Eclipse RCP 3.x application based on Eclipse Mars.</p>
