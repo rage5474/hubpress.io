@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:12:54 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:37:49 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -157,8 +157,27 @@ To get a script visible in the script explorer it has to be registered via scrip
 - Click <strong>Add Workspace&#8230;&#8203;</strong> and select your project.</p>
 </div>
 <div class="paragraph">
-<p>After that your script should be visible in the Script Explorer.</p>
+<p>After that your script should be visible in the Script Explorer. The overall picture show look like this now:
+<span class="image"><a class="image" href="/images/ease/03-ease-script-explorer.png"><img src="https://rage5474.github.io/images/ease/03-ease-script-explorer.png" alt="03 ease script explorer.png" width="500"></a></span></p>
 </div>
+<div class="paragraph">
+<p>Script Explorer has four different actions:
+- Run a script
+- Edit a script
+- Reload repository and (only via button)
+- Rename a script (only via context-menu)</p>
+</div>
+<div class="paragraph">
+<p>Run, edit, and rename a script is pretty clear. Reload repository is useful, if a script was added to a registered repository (means here a registered script location) outside of Eclipse. To become all script visible trigger it by this button.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conlusion">Conlusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So now all should be able to play around with EASE. Next time I will show how to write more cool scripts.</p>
 </div>
 </div>
 </div>]]></description><link>https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</link><guid isPermaLink="true">https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</guid><category><![CDATA[Eclipse]]></category><category><![CDATA[ Raphael Geissler]]></category><category><![CDATA[ Scripting]]></category><category><![CDATA[ EASE]]></category><pubDate>Sun, 08 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
