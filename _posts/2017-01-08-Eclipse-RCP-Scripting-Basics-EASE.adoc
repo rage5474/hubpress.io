@@ -62,9 +62,20 @@ Let us start with a HelloWorld script. Writting a script is easy. Just create a 
 - Enter file name with extension, e.g. *js* 
 - Open script and enter print("Hello World") to the script file and save file.
 
-=== Run a script ===
+=== Run a script with Run as ===
 
 - Select created script and open context-menu
 - *Run as...* -> *EASE Script*
 - Hello World should be printed at the console.
 
+=== Run a script with Script Explorer ===
+
+There is a second possibilty to run scripts. Therefore exists a separate view call *Script Explorer*. 
+To get a script visible in the script explorer it has to be registered via scripting preferences.
+
+To activate our HelloWorld script for the Script Explorer do following:
+- *Window* -> *Preferences*
+- *Scripting* -> *Script Locations*
+- Click *Add Workspace...* and select your project. 
+
+After that your script should be visible in the Script Explorer. 
