@@ -35,7 +35,7 @@ You can see three important views in this perspective, the Script Explorer, Scri
 
 The easiest way to play around with EASE is to use the Script Shell. This is an interpreter for different scripting languages. Default script engine is Rhino (JavaScript). Following picture explains main features of the script shell.
 
-image:ease/02-ease-script-shell.png[width=500,link="/images/ease/02-ease-script-shell.png"]
+image:ease/02-ease-script-shell.png[width=800,link="/images/ease/02-ease-script-shell.png"]
 
  (1) Enter your script commands here (Script Input Field, e.g. print("Hello World.")).
  (2) Entered commands and results can be found here (Script Console).
