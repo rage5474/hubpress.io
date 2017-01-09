@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:07:05 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:12:54 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -129,7 +129,7 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 </div>
 </div>
 <div class="sect2">
-<h3 id="_run_a_script">Run a script</h3>
+<h3 id="_run_a_script_with_run_as">Run a script with Run as</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -142,6 +142,22 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 <p>Hello World should be printed at the console.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_a_script_with_script_explorer">Run a script with Script Explorer</h3>
+<div class="paragraph">
+<p>There is a second possibilty to run scripts. Therefore exists a separate view call <strong>Script Explorer</strong>.
+To get a script visible in the script explorer it has to be registered via scripting preferences.</p>
+</div>
+<div class="paragraph">
+<p>To activate our HelloWorld script for the Script Explorer do following:
+- <strong>Window</strong> &#8594; <strong>Preferences</strong>
+- <strong>Scripting</strong> &#8594; <strong>Script Locations</strong>
+- Click <strong>Add Workspace&#8230;&#8203;</strong> and select your project.</p>
+</div>
+<div class="paragraph">
+<p>After that your script should be visible in the Script Explorer.</p>
 </div>
 </div>
 </div>
