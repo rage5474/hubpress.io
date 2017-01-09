@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:38:55 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:44:21 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -151,10 +151,20 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 To get a script visible in the script explorer it has to be registered via scripting preferences.</p>
 </div>
 <div class="paragraph">
-<p>To activate our HelloWorld script for the Script Explorer do following:
-- <strong>Window</strong> &#8594; <strong>Preferences</strong>
-- <strong>Scripting</strong> &#8594; <strong>Script Locations</strong>
-- Click <strong>Add Workspace&#8230;&#8203;</strong> and select your project.</p>
+<p>To activate our HelloWorld script for the Script Explorer do following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Window</strong> &#8594; <strong>Preferences</strong></p>
+</li>
+<li>
+<p><strong>Scripting</strong> &#8594; <strong>Script Locations</strong></p>
+</li>
+<li>
+<p>Click <strong>Add Workspace&#8230;&#8203;</strong> and select your project.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>After that your script should be visible in the Script Explorer. The overall picture show look like this now:
