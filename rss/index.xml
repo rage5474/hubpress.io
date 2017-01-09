@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 13:22:33 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:01:24 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -95,6 +95,53 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 </div>
 <div class="paragraph">
 <p>Script shell is nice to play, but in the most cases people want to write script to re-use them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_script">Create a script ==</h3>
+<div class="paragraph">
+<p>Let us start with a HelloWorld script. Writting a script is easy. Just create a General Project in your Project Explorer.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>File</strong> &#8594; <strong>New</strong> &#8594; <strong>Project&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Select <strong>Project</strong> (Section <strong>General</strong>) and click <strong>Next</strong></p>
+</li>
+<li>
+<p>Enter a name and click <strong>Finish</strong></p>
+</li>
+<li>
+<p>Select the new project in your Project Explorer and open context menu</p>
+</li>
+<li>
+<p><strong>New</strong> &#8594; <strong>File</strong></p>
+</li>
+<li>
+<p>Enter file name with extension, e.g. <strong>js</strong></p>
+</li>
+<li>
+<p>Open script and enter print("Hello World") to the script file and save file.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_a_script">Run a script ==</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Select created script and open context-menu</p>
+</li>
+<li>
+<p><strong>Run as&#8230;&#8203;</strong> &#8594; <strong>EASE Script</strong></p>
+</li>
+<li>
+<p>Hello World should be printed at the console.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
