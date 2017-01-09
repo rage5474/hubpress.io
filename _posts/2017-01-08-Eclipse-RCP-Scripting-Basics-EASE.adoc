@@ -78,4 +78,16 @@ To activate our HelloWorld script for the Script Explorer do following:
 - *Scripting* -> *Script Locations*
 - Click *Add Workspace...* and select your project. 
 
-After that your script should be visible in the Script Explorer. 
+After that your script should be visible in the Script Explorer. The overall picture show look like this now:
+image:ease/03-ease-script-explorer.png[width=500,link="/images/ease/03-ease-script-explorer.png"]
+
+Script Explorer has four different actions:
+- Run a script 
+- Edit a script
+- Reload repository and (only via button)
+- Rename a script (only via context-menu)
+
+Run, edit, and rename a script is pretty clear. Reload repository is useful, if a script was added to a registered repository (means here a registered script location) outside of Eclipse. To become all script visible trigger it by this button. 
+
+== Conlusion ==
+So now all should be able to play around with EASE. Next time I will show how to write more cool scripts. 
