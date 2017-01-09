@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:44:21 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 14:45:06 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -171,11 +171,23 @@ To get a script visible in the script explorer it has to be registered via scrip
 <span class="image"><a class="image" href="/images/ease/03-ease-script-explorer.png"><img src="https://rage5474.github.io/images/ease/03-ease-script-explorer.png" alt="03 ease script explorer.png" width="500"></a></span></p>
 </div>
 <div class="paragraph">
-<p>Script Explorer has four different actions:
-- Run a script
-- Edit a script
-- Reload repository and (only via button)
-- Rename a script (only via context-menu)</p>
+<p>Script Explorer has four different actions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run a script</p>
+</li>
+<li>
+<p>Edit a script</p>
+</li>
+<li>
+<p>Reload repository and (only via button)</p>
+</li>
+<li>
+<p>Rename a script (only via context-menu)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Run, edit, and rename a script is pretty clear. Reload repository is useful, if a script was added to a registered repository (means here a registered script location) outside of Eclipse. To become all script visible trigger it by this button.</p>
