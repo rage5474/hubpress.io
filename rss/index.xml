@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 12:31:25 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Eclipse RCP Blog]]></title><description><![CDATA[Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ]]></description><link>https://rage5474.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Jan 2017 13:22:33 GMT</lastBuildDate><atom:link href="https://rage5474.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Eclipse RCP Scripting Basics (EASE)]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -67,6 +67,35 @@ and select select <strong>Scripting</strong> from the <strong>Perspective</stron
 </div>
 <div class="paragraph">
 <p><span class="image"><a class="image" href="/images/ease/01-ease-scripting-view.png"><img src="https://rage5474.github.io/images/ease/01-ease-scripting-view.png" alt="01 ease scripting view.png" width="500"></a></span></p>
+</div>
+<div class="paragraph">
+<p>You can see three important views in this perspective, the Script Explorer, Script Shell, and the Module Explorer.</p>
+</div>
+<div class="sect2">
+<h3 id="_script_shell">Script Shell</h3>
+<div class="paragraph">
+<p>The easiest way to play around with EASE is to use the Script Shell. This is an interpreter for different scripting languages. Default script engine is Rhino (JavaScript). Following picture explains main features of the script shell.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="/images/ease/02-ease-script-shell.png"><img src="https://rage5474.github.io/images/ease/02-ease-script-shell.png" alt="02 ease script shell.png" width="500"></a></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> (1) Enter your script commands here (Script Input Field, e.g. print("Hello World.")).
+ (2) Entered commands and results can be found here (Script Console).
+ (3) Start here script recording, toggle button again to save your commands to a script file.
+ (4) Load modules by mouse.
+ (5) Clear Script Console (is not resetting script engine)
+ (6) Hide Variable area.
+ (7) Switch script engine(e.g from JavaScript to Python)
+ (8) Reset script engine.
+ (9) Open an additional script engine.
+(10) Open help.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Script shell is nice to play, but in the most cases people want to write script to re-use them.</p>
+</div>
 </div>
 </div>
 </div>]]></description><link>https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</link><guid isPermaLink="true">https://rage5474.github.io/2017/01/08/Eclipse-RCP-Scripting-Basics-EASE.html</guid><category><![CDATA[Eclipse]]></category><category><![CDATA[ Raphael Geissler]]></category><category><![CDATA[ Scripting]]></category><category><![CDATA[ EASE]]></category><pubDate>Sun, 08 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Eclipse RCP 3.x with Compatibility Layer]]></title><description><![CDATA[<div id="preamble">
