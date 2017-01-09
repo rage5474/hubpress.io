@@ -29,6 +29,26 @@ After the perspective switch your Eclipse should look like this:
 
 image:ease/01-ease-scripting-view.png[width=500,link="/images/ease/01-ease-scripting-view.png"]
 
+You can see three important views in this perspective, the Script Explorer, Script Shell, and the Module Explorer. 
+
+=== Script Shell ===
+
+The easiest way to play around with EASE is to use the Script Shell. This is an interpreter for different scripting languages. Default script engine is Rhino (JavaScript). Following picture explains main features of the script shell.
+
+image:ease/02-ease-script-shell.png[width=500,link="/images/ease/02-ease-script-shell.png"]
+
+ (1) Enter your script commands here (Script Input Field, e.g. print("Hello World.")).
+ (2) Entered commands and results can be found here (Script Console).
+ (3) Start here script recording, toggle button again to save your commands to a script file.
+ (4) Load modules by mouse.
+ (5) Clear Script Console (is not resetting script engine)
+ (6) Hide Variable area.
+ (7) Switch script engine(e.g from JavaScript to Python)
+ (8) Reset script engine.
+ (9) Open an additional script engine. 
+(10) Open help.
+
+Script shell is nice to play, but in the most cases people want to write script to re-use them. 
 
 
 
