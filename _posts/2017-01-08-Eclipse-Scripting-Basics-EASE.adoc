@@ -74,6 +74,7 @@ There is a second possibilty to run scripts. Therefore exists a separate view ca
 To get a script visible in the script explorer it has to be registered via scripting preferences.
 
 To activate our HelloWorld script for the Script Explorer do following:
+
 - *Window* -> *Preferences*
 - *Scripting* -> *Script Locations*
 - Click *Add Workspace...* and select your project. 
