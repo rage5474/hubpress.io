@@ -1,4 +1,4 @@
-= Eclipse RCP Scripting Basics (EASE) =
+= Eclipse Scripting Basics (EASE) =
 :hp-tags: Eclipse, Raphael Geissler, Scripting, EASE
 
 == Motivation ==
