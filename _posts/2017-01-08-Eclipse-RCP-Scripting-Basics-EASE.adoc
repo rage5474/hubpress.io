@@ -50,6 +50,20 @@ image:ease/02-ease-script-shell.png[width=500,link="/images/ease/02-ease-script-
 
 Script shell is nice to play, but in the most cases people want to write script to re-use them. 
 
+=== Create a script ==
 
+Let us start with a HelloWorld script. Writting a script is easy. Just create a General Project in your Project Explorer. 
 
+- *File* -> *New* -> *Project...*
+- Select *Project* (Section *General*) and click *Next*
+- Enter a name and click *Finish*
+- Select the new project in your Project Explorer and open context menu
+- *New* -> *File*
+- Enter file name with extension, e.g. *js* 
+- Open script and enter print("Hello World") to the script file and save file.
+
+=== Run a script ==
+- Select created script and open context-menu
+- *Run as...* -> *EASE Script*
+- Hello World should be printed at the console.
 
