@@ -83,6 +83,7 @@ After that your script should be visible in the Script Explorer. The overall pic
 image:ease/03-ease-script-explorer.png[width=500,link="/images/ease/03-ease-script-explorer.png"]
 
 Script Explorer has four different actions:
+
 - Run a script 
 - Edit a script
 - Reload repository and (only via button)
