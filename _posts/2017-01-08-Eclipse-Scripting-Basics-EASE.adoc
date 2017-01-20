@@ -13,8 +13,7 @@ Installation is as usual:
 - Start Eclipse
 - *Help* -> *Install New Software...*
 - Enter following address in the *Work with* field: 
-* http://download.eclipse.org/ease/update/release (Currently release 0.3.0) or
-* http://download.eclipse.org/ease/update/nightly (Currently release 0.4.0 - don't know when it will be released)
+* http://download.eclipse.org/ease/update/release (Current release 0.4.0) 
 - Check all features and click *Next* and
 - again *Next* and
 - accept licenses and click *Finish* and
