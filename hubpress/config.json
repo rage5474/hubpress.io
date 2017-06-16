@@ -2,19 +2,33 @@
   "meta": {
     "username": "rage5474",
     "repositoryName": "rage5474.github.io",
-    "branch": "master"
+    "branch": "master",
+    "cname": ""
   },
   "site": {
     "title": "Eclipse RCP Blog",
     "description": "Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... ",
     "logo": "/images/ich.jpg",
-    "disqus": "https-rage5474-github-io"
+    "disqus": "https-rage5474-github-io",
+    "cover": "",
+    "delay": "",
+    "postsPerPage": "",
+    "googleAnalytics": ""
   },
   "socialnetwork": {
-    "github": "rage5474"
+    "github": "rage5474",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "googleplus": "",
+    "instagram": "",
+    "pinterest": "",
+    "flickr": "",
+    "linkedin": "",
+    "stackoverflow": ""
   },
   "theme": {
-    "name": "ichi"
+    "name": "casper"
   },
   "urls": {
     "site": "https://rage5474.github.io",
