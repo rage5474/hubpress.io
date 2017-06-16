@@ -15,5 +15,21 @@
   },
   "theme": {
     "name": "ichi"
+  },
+  "urls": {
+    "site": "https://rage5474.github.io",
+    "hubpress": "https://rage5474.github.io",
+    "theme": "//rage5474.github.io/themes/ichi",
+    "images": "https://rage5474.github.io/images"
+  },
+  "initialisationConfigComponent": {
+    "name": "initialise-configuration",
+    "computed": {},
+    "methods": {},
+    "staticRenderFns": [
+      null,
+      null,
+      null
+    ]
   }
 }
