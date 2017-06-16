@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "casper"
+    "name": "ichi"
   },
   "urls": {
     "site": "https://rage5474.github.io",
     "hubpress": "https://rage5474.github.io",
-    "theme": "//rage5474.github.io/themes/ichi",
+    "theme": "//rage5474.github.io/themes/casper",
     "images": "https://rage5474.github.io/images"
   },
   "initialisationConfigComponent": {
