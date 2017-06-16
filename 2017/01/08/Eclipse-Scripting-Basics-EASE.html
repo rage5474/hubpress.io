@@ -12,31 +12,22 @@
 
     <link rel="shortcut icon" href="https://rage5474.github.io/favicon.ico">
 
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/fastclick.js?v=1484927873544"></script>
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/vendor/modernizr.js?v=1484927873544"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/normalize.css?v=1484927873544" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/foundation.min.css?v=1484927873544" />
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/outdatedBrowser.min.css?v=1484927873544">
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1484927873544" />
-    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/ichi/assets/css/styles.css?v=1484927873544" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
+    <link rel="stylesheet" type="text/css" href="//rage5474.github.io/themes/casper/assets/css/screen.css?v=1497619916432" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html" />
     <meta name="referrer" content="origin" />
     
     <meta property="og:site_name" content="Eclipse RCP Blog" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="Eclipse Scripting Basics (EASE)" />
     <meta property="og:description" content="Motivation Last time I thought that I would be nice to evaluate automated the output of an application started by Eclipse. E.g. to get an error dialog message when an exception is thrown or at least see an log entry in the Error Log View. Then I thought I" />
     <meta property="og:url" content="https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html" />
+    <meta property="article:published_time" content="2017-01-08T00:00:00.000Z" />
     <meta property="article:tag" content="Eclipse" />
-    <meta property="article:tag" content=" Raphael Geissler" />
-    <meta property="article:tag" content=" Scripting" />
-    <meta property="article:tag" content=" EASE" />
+    <meta property="article:tag" content="Raphael Geissler" />
+    <meta property="article:tag" content="Scripting" />
+    <meta property="article:tag" content="EASE" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Eclipse Scripting Basics (EASE)" />
@@ -44,91 +35,56 @@
     <meta name="twitter:url" content="https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html" />
     
     <script type="application/ld+json">
-null
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Eclipse RCP Blog",
+    "author": {
+        "@type": "Person",
+        "name": "rage5474",
+        "image": "https://avatars1.githubusercontent.com/u/12368367?v=3",
+        "url": "https://rage5474.github.io/author/rage5474/",
+        "sameAs": "http://rage5474.github.io"
+    },
+    "headline": "Eclipse Scripting Basics (EASE)",
+    "url": "https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html",
+    "datePublished": "2017-01-08T00:00:00.000Z",
+    "keywords": "Eclipse, Raphael Geissler, Scripting, EASE",
+    "description": "Motivation Last time I thought that I would be nice to evaluate automated the output of an application started by Eclipse. E.g. to get an error dialog message when an exception is thrown or at least see an log entry in the Error Log View. Then I thought I"
+}
     </script>
 
     <meta name="generator" content="HubPress" />
     <link rel="alternate" type="application/rss+xml" title="Eclipse RCP Blog" href="https://rage5474.github.io/rss/" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
 </head>
-<body class="post-template tag-Eclipse tag-Raphael-Geissler tag-Scripting tag-EASE">
+<body class="post-template tag-Eclipse tag-Raphael-Geissler tag-Scripting tag-EASE nav-closed">
 
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
-</div>
-
-<nav class="top-bar hide-for-large-up" data-topbar >
-  <ul class="title-area">
-    <li class="name">
-
-    </li>
-    <li class="home"><a class="fi-home" href="https://rage5474.github.io"></a></li>
-    <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
-  </ul>
-
-<div class="overlay overlay-scale">
-    <button type="button" class="overlay-close">Close</button>
-    <nav>
-        <ul>
-            <li><a href="https://rage5474.github.io">Home</a></li>
-        </ul>
-    </nav>
-</div>
-
-</nav>
-
-<div class="row">
-
-<div class="small-16 medium-16 large-4 columns right head-area" >
-
-<header class="site-head">
-    <div class="vertical">
-        <div class="site-head-content inner">
-            <ul class="side-nav blog-menu show-for-large-up">
-                <li><a class="fi-home" href="https://rage5474.github.io"></a></li>
-                <li><a class="fi-torso" href="https://rage5474.github.io/about"></a></li>
-                <li><a class="fi-mail" href="https://rage5474.github.io/contact"></a></li>
-            </ul>
-            <a class="blog-logo" href="https://rage5474.github.io"><img alt="Eclipse RCP Blog" src="/images/ich.jpg" alt="Blog Logo" /></a>
-            <h1 class="blog-title">Eclipse RCP Blog</h1>
-            <hr>
-            <p class="blog-description">Yet another blog for Eclipse RCP topics, like good Eclipse RCP architecture, software architecture control, ... </p>
-            <div class="blog-network">
-<!--                 <a href="#" class="fi-social-pinterest"></a>
-                <a href="#" class="fi-social-linkedin"></a>
-                <a href="#" class="fi-social-behance"></a>
-                <a href="#" class="fi-social-deviant-art"></a>
-                <a href="#" class="fi-social-dribbble"></a>
-                <a href="#" class="fi-social-flickr"></a>
-                <a href="#" class="fi-social-github"></a>
-                <a href="#" class="fi-social-skype"></a>
-                <a href="#" class="fi-social-snapchat"></a>
-                <a href="#" class="fi-social-steam"></a>
-                <a href="#" class="fi-social-xbox"></a>
-                <a href="#" class="fi-social-reddit"></a> -->
-                  <a href="rage5474" class="fi-social-github"></a>
-            </div>
-        </div>
-    </div>
-</header>
-
-</div>
-
-
-<div class="small-16 medium-16 large-12 columns main-column left">
     
 
-<main class="content" role="main">
+    <div class="site-wrapper">
 
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="https://rage5474.github.io"><img src="/images/ich.jpg" alt="Eclipse RCP Blog" /></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
     <article class="post tag-Eclipse tag-Raphael-Geissler tag-Scripting tag-EASE">
 
-
+        <header class="post-header">
             <h1 class="post-title">Eclipse Scripting Basics (EASE)</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-01-08">08 January 2017</time>  on <a href="https://rage5474.github.io/tag/Eclipse/">Eclipse</a>, <a href="https://rage5474.github.io/tag/Raphael-Geissler/">Raphael Geissler</a>, <a href="https://rage5474.github.io/tag/Scripting/">Scripting</a>, <a href="https://rage5474.github.io/tag/EASE/">EASE</a>
+            </section>
+        </header>
 
-            <span class="post-meta label"><time datetime="2017-01-08">08 Jan 2017</time></span>
-
-            <section class="post-content">
-                <div class="sect1">
+        <section class="post-content">
+            <div class="sect1">
 <h2 id="_motivation">Motivation</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -330,47 +286,43 @@ To get a script visible in the script explorer it has to be registered via scrip
 </div>
 </div>
 </div>
-                        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://rage5474.github.io/tag/Eclipse/">Eclipse</a>, <a href="https://rage5474.github.io/tag/Raphael-Geissler/"> Raphael Geissler</a>, <a href="https://rage5474.github.io/tag/Scripting/"> Scripting</a>, <a href="https://rage5474.github.io/tag/EASE/"> EASE</a></aside>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="https://rage5474.github.io/author/rage5474/" style="background-image: url(https://avatars1.githubusercontent.com/u/12368367?v&#x3D;3)"><span class="hidden">rage5474's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="https://rage5474.github.io/author/rage5474/">rage5474</a></h4>
+
+                    <p>Read <a href="https://rage5474.github.io/author/rage5474/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    <span class="author-link icon-link"><a href="http://rage5474.github.io">http://rage5474.github.io</a></span>
+                </div>
             </section>
-            <hr>
-            <footer class="post-footer">
-
-                <section class="share">
-                    <h4>Liked this post ? Share it.</h4>
-                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html"
-                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    </a>
-                    <a class="fi-social-twitter" href="https://twitter.com/share?text=Eclipse%20Scripting%20Basics%20(EASE)&amp;url=https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html"
-                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    </a>
-                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=https://rage5474.github.io/2017/01/08/Eclipse-Scripting-Basics-EASE.html"
-                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    </a>
-                </section>
-
-                <section class="author">
-                    <header>
-                        <span>About the author</span>
-                    </header>
-                    <section>
-                        <h4>rage5474</h4>
-                        <img src="https://avatars.githubusercontent.com/u/12368367?v&#x3D;3">
-                        
-                        <a href="http://rage5474.github.io">http://rage5474.github.io</a>
-                    </section>
-                    <footer>
-                         <p></p>
-                    </footer>
-                </section>
-
-        <div class="clearfix"></div>
-                    <hr>
-
-            </footer>
-
-        <h3 class="title-disqus"><span class="fi-comments"></span>Discussions</h3>
 
 
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Eclipse%20Scripting%20Basics%20(EASE)&amp;url=https://rage5474.github.io/"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rage5474.github.io/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://rage5474.github.io/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
 
 
         <section class="post-comments">
@@ -393,11 +345,20 @@ To get a script visible in the script explorer it has to be registered via scrip
 
 </main>
 
-</div>
+<aside class="read-next">
+</aside>
 
-</div>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="https://rage5474.github.io">Eclipse RCP Blog</a> &copy; 2017</section>
+            <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js?v="></script> 
       <script type="text/javascript">
         jQuery( document ).ready(function() {
           // change date with ago
@@ -409,15 +370,11 @@ To get a script visible in the script explorer it has to be registered via scrip
 
         hljs.initHighlightingOnLoad();
       </script>
+       
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/outdatedBrowser.min.js?v=1484927873544"></script>
-    <![endif]-->
-    <script type="text/javascript" src="//rage5474.github.io/themes/ichi/assets/js/min/built.js?v=1484927873544"></script>
-
-    <script>
-      $(document).foundation();
-    </script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/casper/assets/js/jquery.fitvids.js?v=1497619916432"></script>
+    <script type="text/javascript" src="//rage5474.github.io/themes/casper/assets/js/index.js?v=1497619916432"></script>
 
 </body>
 </html>
